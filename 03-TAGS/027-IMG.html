@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG</title>
+    
+</head>
+<body>
+    <!-- "img" é usada para inserir uma imagem na tela por através de URL.-->
+    <!-- Tag "img" só abre, pois ela não precisa de conteúdo -->
+    <!-- Atributos como "src" e "alt" são obrigatórios nessa tag, afinal o "src" é que vai mostrar qual é o URL da imagem, e o "alt" é de extrema importância para a semântica, já que os SEO's irão procurar por uma mensagem alternativa para mostrar caso a imagem não seja carregada ou para os leitores de tela -->
+    <!-- Alguns atributos específicos dessa tag são:
+        => alt: para definir um texto alternativo para a imagem;
+        => crossorigin: para definir elementos que lidam com solicitações de origem cruzada como: anonymous ou use-credentials;
+        => heigth: Define altura da imagem;
+        => ismap: Define o mapa de uma imagem em relação á página (que são os seus eixos x y em relação a página), porém essa definição só pode ser capturada do lado do servidor;
+        => longdesc: Define uma descrição longa para a imagem, que deve ser referenciada por através de "id";
+        => sizes: Define tamanhos alternativos para a imagem;
+        => src: Define URl de origem da imagem;
+        => srcset: Define mais de um URL de origem para a imagem, dependendo da situação do navegador, ou dispositivo;
+        => usemap: Define o mapa de uma imagem em relação á página (que são os seus eixos x y em relação a página), essa definição pode ser capturada do lado do cliente;
+        => width: Define largura da imagem; -->
+    <!--CSS padrão de "img": 
+        img{
+            display: inline-block;
+        }
+    -->
+
+        <img src="027-img-logo.png" alt="Aqui aparece o Logo da Hcode" height="100px" width="100px">
+        <!-- Observações:
+                    - Para SEO o ideal é que o tamanho da sua imagem esteja de acordo com o tamanho delimitado dentro da tag img; -->
+
+        <a href="https://www.hcode.com.br" target="_blank">
+            <img src="027-img-logo.png" alt="Aqui aparece o Logo da Hcode" height="100px" width="100px">
+        </a>
+        <!-- Observações:
+                    - Esse é um exemplo de tag usado como link! -->
+        
+        <a href="https://www.hcode.com.br" target="_blank">
+            <img src="027-img-logo.png" alt="Aqui aparece o Logo da Hcode" height="100px" width="100px" ismap>
+        </a>
+        <!-- Observações:
+                    - Selecione o link da terceira foto e veja que na próxima página o último valor passado como parâmetro trouxe os eixos x e y da imagem. -->
+                    
+        <a href="https://www.hcode.com.br" target="_blank">
+            <img src="027-img-logo.png" alt="Aqui aparece o Logo da Hcode" height="100px" width="100px" longdesc="#description">
+        </a>
+        <div id="description">
+            <h1>Descrição Logo HCode</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat nostrum voluptatem pariatur, ducimus aperiam accusantium ipsum eos error quisquam odio fugit assumenda. Modi autem, optio aperiam vitae dolor repellendus.</p>
+        </div>
+        <!-- Observações:
+                    - Usando longdesc conseguimos linkar uma imagem a descrição sobre ela dentro de um "id". Visualmente falando isso não afetaria em nada, mas para o SEO e leitores de tela, essa é uma informação adicional. -->
+
+
+
+</body>
+</html>

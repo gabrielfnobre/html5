@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!--Identificamos o padrão de caracter mais abrangente o "UTF-8"-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--O valor "X-UA-Compatible" é um valor para o "http-equiv" que faz com que esse atributo force o navegador a usar o padrão mais recente de html que um navegador tiver. Nesse caso, essa definição está sendo utilizada para o "IE=edge" que seria o Internet Explorer, em vez de se adaptar a uma versão antiga do Internet Explorer, o navegador será forçado a procurar por uma versão mais nova do html e fazer o navegador rodar a página de acordo com essa versão. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--O "viewport" está usando o valor "width=device-width" ou seja "largura igual a largura total do dispositivo", com uma initial-scale de 1.0, ou seja, não importa o dispositivo, o site vai acompanhar o sentido da largura da tela do dispositivo, usando como escala 1 para 1.-->
+    <meta name="application-name" content="Meta app"> <!-- Com a "meta name="application-name"" fomos capazes de criar um nome de aplicação para a nossa página. Isso serve para caso o usuário da nossa página deseje criar um atalho da nossa página para usá-lo como se fosse um aplicativo.-->
+    <meta name="description" content="Essa página é um exemplo do uso da descrição da tag meta"> <!-- Usamos o meta name description para dar uma descrição a nossa página, para ser achada e indexada pelos robôs de pesquisa dos navegadores.-->
+    <meta name="author" content="Gabriel F."> <!-- Essa tag informa aos robôs de pesquisa dos navegadores quem é o autor da página. Isso facilita a busca por nome chave de autores específicos.-->
+    <meta name="keywords" content="HTML5, meta, tags, aprender"> <!-- essa tag faz com que usemos palavras chave (keywords) para que a nossa página possa ser encontrada com facilidade pelos navegadores quando estes buscam por palavras específicas.-->
+    <meta http-equiv="refresh" content="5"> <!-- com o comando http-equiv refresh podemos escolher um time em segundos para que a nossa página possa ser atualizada de tanto em tantos segundos, conforme foi definido no content-->
+    <meta name="generator" content=visual studio code> <!-- visualmente e comportamentalmente essa tag não adiciona nenhum comportamento a nossa página, é apenas algo informativo.-->
+    
+    <title>META</title>
+</head>
+<body>
+    <!-- OBJETIVO:
+        A tag "meta" é uma abreviação de "metadata" ou "metadados", que são informações sobre a nossa página e dos dados que vão junto ao cabeçalho do site. A tag "meta" é uma tag que não precisa de fechamento por que ela não tem conteúdo, ela só tem atributos que passam informações para os navegadores, para mecanismos de pesquisa e de busca na web.
+        A verdade é que os usuários não vão ver os dados da tag "meta", pois esses dados são carregados na área "head", ou seja, são carregados no momento em que a página está sendo aberta.
+        A tag "meta" possuí alguns atributos que são específicos só para ela, que são:
+            #charset: 
+            significa "character set" (Conjunto de Caracteres), que define um padrão de caracteres que pode ser usado no arquivo. Os caracteres de toda a página serão carregados de acordo com esse padrão. Por padrão, utilizamos o "UTF-8" que é o padrão de caracteres mais utilizado dos nossos dias, por agregar uma grande quantidade de caracteres de vários idiomas diferentes.
+
+            #content:
+            significa "conteúdo", esse atributo é usado em conjunto com outros atributos, geralmente é ele que contém alguma informação adicional que servirá como parâmetro para o atributo que está junto com ele.
+
+            #http-equiv:
+            significa "HyperText Transfer Protocol Equivalent" (Protocolo de Transferência de HiperTexto Equivalente), essa tag define comportamentos que a nossa página vai assumir quando em contato com o procotolo http, que é justamente o protocolo utilizado para a leitura e busca de arquivos em html na internet. Alguns valores usados pelo "http-equiv" são: "content-type", "default-style", "refresh" e etc. Esse atributo vai trabalhar em conjunto com o atributo "content" que trará algum tipo de comportamento para interagir em conjunto com o "http-equiv".
+
+            #name:
+            signica "nome", mas refere-se ao nome de um metadado específico a respeito da página, os metadados que podemos usar são: 
+                    "application-name" - usado para atribuir um nome a nossa página caso ela seja salva numa tela inicial de celular, como se fosse uma aplicação.
+                    
+                    "author" - usado para informar a internet quem é desenvolvedor da página.
+                    
+                    "description" - usado para atribuir uma descrição a página, que poderá ser utilizada pelo navegador para nos dar uma descrição mais detalhada, porém consisa, do que se trata a nossa página.
+                    
+                    "generator" - usado por para especificar que software foi usado para se escrever a página. 
+                    
+                    "keywords" - usado para adicionar palavras chave sobre o que fala a nossa página, essas palavras chaves são usados por mecanismos de busca e pesquisa para encontrar conteúdos relevantes para os seus usuários.
+                    
+                    "viewport" - usado para atribuir uma escala de enquadramento da nossa página para os diversificados tipos de dispositivos. Por exemplo, por através desse atributo conseguimos deixar o nosso site responsivo para telas na horizontal ou na vertical, para telas de celular, ou desktop.
+    -->
+    <!-- EXEMPLO:
+        Veja como usamos as tags meta nesse mesmo arquivo logo acima...
+    -->
+</body>
+</html>

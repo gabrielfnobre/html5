@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPTIED</title>
+</head>
+
+<!-- Evento: emptied (esvaziado).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - emptied: é um evento que ocorre sempre que uma mídia fica indisponível.
+        - Atenção! Esse evento só ocorre se a mídia ficar indisponível por algum motivo de indisponibilidade de rede, a mídia se encontra no servidor, mas a rede não permite e visualização dela.
+        - Esse evento ocorre muito rápido, é provável que não seja possível visualizá-la.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" onempitied="debug(event)">
+    </video>
+    <!-- Esse evento só acontecerá se houver algum problema na rede que torne impossível a visualização de um arquivo que realmente exista num servidor.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDDEN</title>
+    <style>
+        .div {
+            width: 100px;
+            height: 100px;
+            border: black 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- OBJETIVO:
+        O atributo "hidden" do inglês "esconder", tem justamente o objetivo de esconder um elemento para que ele não apareça na tela embora ele esteja lá.
+    -->
+    <!-- EXEMPLO
+        No exemplo abaixo, embora tenhamos duas div's, uma vermelha e outra branca, a vermelha não aparece por causa do atributo "hidden".
+    -->
+
+    <div class="div" style="background: red;" hidden></div>
+    <!-- Retire a palavra "hidden" acima e veja como a div vermelha aparece na tela graças a isso -->
+    <div class="div"></div>
+    <!-- OBSERVAÇÕES: o atributo "hidden" não precisa de valor, já que seu único valor é "hidden" mesmo, e sua única função é esconder um elemento. -->
+</body>
+</html>

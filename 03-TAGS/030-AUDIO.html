@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO</title>
+    
+</head>
+<body>
+    <!-- "audio" é usada para inserir áudios dentro do arquivo HTML-->
+    <!-- Essa tag suporta arquivos como: MP3, WAV e OGG-->
+    <!-- Qualquer texto que for inserido dentro dessa tag será exibido por navegadores que não suportam o uso de determinado formato de áudio que colocamos na nossa página-->
+    <!-- Tag "audio" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- Essa tag possuí atributos específicos, como:
+            => autoplay: produz o áudio automáticamente assim que o arquivo é carregado na página;
+            => controls: habilita a utilização de controles de reprodução dos áudios;
+            => loop: habilita que o áudio fique sendo reproduzido em loop;
+            => muted: define que por padrão o áudio seja carregado em mute;
+            => preload: define como que o arquivo de áudio deve ser carregado assim que a página for carregada, e não os seus metadados, isso agiliza o carregado do áudio. Dentro desse atributo podemos usar os seguintes valores: auto, metadata ou none;
+            => src: define o URL do arquivo de áudio;
+    -->
+    <!--CSS padrão de "audio": Nenhum;
+    -->
+
+    <audio src="030-audio-How_it_Began.mp3" controls preload autoplay></audio>
+    <audio src="030-audio-How_it_Began.ogg" controls loop></audio><!--Quando chega no final ele inicia novamente-->
+    <audio src="030-audio-How_it_Began.ogg" controls muted></audio><!--Quando usamos muted o áudio aparecerá desabilitado-->
+    <!-- Observações:
+                Perceba que mesmo com autoplay o áudio não é tocado instantanemente, isso por que em versões mais atuais do HTML5, essa tag foi desabilitada, isso só é possível com JavaScript
+             -->
+
+
+</body>
+</html>

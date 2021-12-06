@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Podemos criar um arquivo css diretamente colocando ele sobre um link, basta nós criarmos a tag link normalmente, melhor ainda se a criação for por através de "link:css" - pois o arquivo style.css será criado automático, ai nós seguramos o crtl encima do arquivo "style.css" que ainda não existe, e o próprio visual vai nos dar a ideia de criá-lo. Vai aparecer uma mensagem de erro, é só apertar em enter e o arquivo será criado automáticamente. -->
+</head>
+<!-- Nessa versão nós incluímos uma folha de estilos externa -->
+<body>
+
+    <header>
+        <h1><a href="https://www.hcode.com.br"  target="_blank">Hcode</a></h1>
+        <nav></nav>
+    </header>
+
+    <section>
+        <div>
+            <a href="https://www.hcode.com.br" target="_blank"><img src="../assets/images/hcode.png" alt="Logo da Hcode"></a>  
+        </div>
+
+        <form action="/login" method="POST">
+
+            <div>
+                <input type="email" placeholder="Digite o seu Email" required>
+            </div>
+
+            <div>
+                <input type="password" placeholder="Digite a Senha" required>
+            </div>
+
+            <div>
+                <button>Enviar</button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>Hcode Treinamentos</p>
+    </footer>
+    
+</body>
+</html>

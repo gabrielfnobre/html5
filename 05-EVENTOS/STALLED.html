@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STALLED</title>
+</head>
+
+<!-- Evento: stalled (parada).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - stalled: é um evento que ocorre sempre que acontece um problema de conexão durante o carregamento de uma mídia.
+
+    OBS: todos os eventos devem começar com o prefixo "on"
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4"
+    onstalled="debug(event)"
+    controls>
+    </video>
+    <!-- Esse também é um evento difícil de ser visualizado, é preciso estar acontecendo algum problema na rede para que ele aconteça.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRESS</title>
+</head>
+
+<!-- Evento: progress (progresso).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - progress: é um evento que ocorre sempre que os dados de um arquivo de mídia está sendo baixados. Ele mostra na realidade o progresso dos dados de uma mídia, e NÃO a barra de progresso do vídeo em si.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" 
+    onplay="debug(event)"
+    onplaying="debug(event)"
+    onprogress="debug(event)"
+    controls>
+    </video>
+    <!-- Perceba que o evento "progress" é o primeiro a acontecer dentre os eventos de controle das mídias, a primeira coisa que acontece são os dados serem baixados antes da mídia poder ser tocada em si.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

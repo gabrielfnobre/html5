@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+</head>
+
+<!-- Tag svg (??)
+    
+    - Essa Tag é usada para definir um contêiner para gráficos vetoriais escaláveis.
+    - Essa tag é usada para criar desenhos, formas e etc, em modelo de vetor, como alguns programas que utilizam vetores, como o Corel Draw por exemplo.
+    - Esses vetores são escaláveis, pois mesmo que você dê zoom na imagem, ela não perde a resolução.
+    - Essa tag pode utilizar todos os atributos glogais.
+    
+    - O CSS padrão dela é:
+            
+        nenhum
+
+    OBS: arquivos em svg são bem mais leves que arquivos de foto normais.
+        Podemos também salvar um arquivo como svg e atribuirmos ele a nossa página por através da tag "img", o resultado do vetorial vai ser o mesmo que criar a tag diretamente.
+-->
+
+<body>
+    
+    <!-- Perceba que o svg vai comportar tags que criarmos, como essa tag circle que vai imitar um círculo com preenchimento e borda -->
+    <svg width="100" heigth="100">
+
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+        <img src="111-svg-circle.png" alt="arquivo de imagem do círculo">
+
+    </svg>
+    <!-- Dê zoom e veja a diferença de resolução entre a imagem svg e a imagem png quando damos zoom na tela -->
+
+    
+
+</body>
+</html>

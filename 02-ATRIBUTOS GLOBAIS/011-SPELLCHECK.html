@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPELLCHECK</title>
+</head>
+<body>
+    <!-- OBJETIVO:
+        O atributo "spellcheck" ou "verificação ortográfica" do inglês, é um atributo global utilizado para que o usuário possa checkar a verificação ortográfica de um determinado texto. Em geral utilizamos o spellcheck em conjunto com a tag contenteditable ou em tags para textos em formulários.
+        OBSERVAÇÕES: se colocamos o "spellcheck" em uma tag não editável em uma página que está no nosso computador e tentarmos visualizar a verificação ortográfica, não vamos conseguir, a verificação só vai funcionar para o usuário que acessa a nossa página. Nós só conseguimos ver a verificação ortográfica em uma página que está no nosso computador se o elemento for editável.
+    -->
+    <!-- EXEMPLO:
+        No exemplo abaixo podemos ver como funciona a verificação ortográfica no caso de uma página que está no nosso próprio computador. Temos 2 parágrafos usando spellcheck, um com contenteditable e outro não, note que no texto que contém contenteditable, quando clickamos aparecem as verificações ortográficas, enquanto no outro o texto simplesmente é selecionado mas nenhuma configuração acontece...
+    -->
+    <h1>clique com o mouse encima dos parágrafos...</h1>
+    <p spellcheck="true" contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum, fugiat tempora maxime est autem distinctio quia modi voluptatem et dolorem. Velit adipisci consectetur eveniet labore, earum placeat quam. Perferendis.</p>
+    <p spellcheck="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum, fugiat tempora maxime est autem distinctio quia modi voluptatem et dolorem. Velit adipisci consectetur eveniet labore, earum placeat quam. Perferendis.</p>
+</body>
+</html>

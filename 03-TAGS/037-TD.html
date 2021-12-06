@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>TD</title>
+
+</head>
+<body>
+    <!-- "td" (Table Data - Dados de Tabela) é usada para criar células dentro das linhas das tabelas. Pode parecer que quando usamos "td" estamos criando colunas, mas lembre-se que cada "td" vai dentro de uma única "tr", o que significa que não podem ser "colunas", e sim células.-->
+    <!-- Todas as "td" precisam de um "tr" para coexistir, pois são as "tr" que comportam as "td" -->
+    <!-- Tag "td" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- A tag "td" possuí atributos específicos somente para ela:
+            => colspan: define um número de colunas - ou melhor dizendo a quantidade de células em sentido horizontal - que uma determinada "td" deve ocupar;    
+            => headers: define por através de ID uma ou mais células relacionadas a uma célula específica;
+            => rowspan: define um número de linhas - ou melhor dizendo a quantidade de células em sentido vertical - que uma determinada "td" deve ocupar;
+    -->
+    <!--CSS padrão de "td":
+        tr {
+            display: table-cell;
+            vertical-align: inherit; //ou seja, herda do elemento ancestral
+        }
+    -->
+
+    <table>
+        <tr>
+            <td colspan="2">a1</td> <!--Mudança com colspan-->
+            <td>c1</td> <!--precisamos de retirar célula b1 para que a1 ocupasse 2 lugares-->
+        </tr>
+        <tr>
+            <td>a2</td>
+            <td rowspan="2">b2</td> <!--Mudança com rowspan-->
+            <td>c2</td>
+        </tr>
+        <tr>
+            <td>a3</td>
+            <td>c3</td><!--precisamos de retirar célula b3 para que B2 ocupasse 2 lugares em linha-->
+        </tr>
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+/*Delimitamos o os boxes a não passarem das bordas*/
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    min-height: 500px;
+    background-image: url("../images/header.jpg"); /*Perceba que colocamos a imagem no CSS e não direto no HTML*/
+    background-repeat: no-repeat; /*Imagem não se repete*/
+    background-size: cover;
+    background-position: bottom; /*a imagem vai priorizar ocupar a parte de baixo do header*/
+    position: relative; /*Significa que todos os elementos colocados dentro do header vão ter que respeitar a posição dele "Você respeite seu pai".*/
+}
+
+/*div criada para dar um efeito gradiente*/
+header .bg-gradiente {
+    min-height: 300px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,.65)0%, rgba(0,0,0,0)100%); /*Cria um efeito gradiente de cima para baixo, se quiséssemos em outra direção bastava usar: to top, to right ou to left*/
+}
+
+/*div que cria uma linha de borda para separação do menu em relação ao restante do header*/
+header .header-border {
+    display: flex;
+    border-bottom: rgba(255,255,255,.25) 1px solid; /*Linha sombreada branca*/
+}
+
+/*Logo onde vai o nome NobreCoder*/
+header #logo{
+    width: 200px;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: black 1px 1px 8px; /*Sombreamento envolta do logo*/ 
+    padding-left: 20px;   
+} 
+
+/*div onde vai o menu*/
+header #menu {
+    flex: 1;
+}
+
+/*formatação da lista onde vão os itens do menu*/
+header #menu ul {
+    display: flex; /*Itens filhos serão flexiveis ao espaço do pai*/
+    justify-content: flex-end; /*itens da lista vão ser jogados para o final do box*/
+    list-style: none;
+    padding: 0;
+}
+
+/*Formatação dos itens do menu*/
+header #menu li{
+    min-width: 100px;
+    line-height: 28px;
+}
+
+/*Links do menu*/
+header #menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: bold;
+
+}
+
+/*Formulário...*/
+#register {
+    background: #fff;
+    width: 100%;
+    height: 400px;
+    max-width: 350px;
+    position: absolute; /*Onde for delimitado dentro da área do seu elemento pai, ele terá de ficar lá...*/
+    bottom: 0;  /*Foi posicionado no ponto mais baixo em relação ao elemento pai*/
+    right: 10vh; /*Em relação ao canto direito terá 10 vh de espaçamento*/
+    box-shadow: 0 0 2.1875rem rgba(140,152,164,.125); /*sombreamento da caixa do formulário*/
+    border-top-left-radius: 0.25rem; /*canto arredondado esquerdo*/
+    border-top-right-radius: 0.25rem; /*canto arredondado direitro*/
+    padding: 20px;
+    color: #333;
+}
+
+#register p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+#register .field{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#register input {
+    width: 100%;
+    padding: .75em 1rem;
+    border-radius: 4px;
+    border: #ccc 1px solid;
+}
+
+#register input[type=radio] {
+    width: 25px;
+}
+
+#register button {
+    width: 100%;
+    border: none;
+    background-color: #e67e22;
+    color: #fff;
+    padding: .75rem;
+    font-size: 1.2em;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title h1 {
+    font-size: 3em;
+    border-bottom: #ccc 1px solid;
+    padding-bottom: 1rem;
+}
+
+.home p {
+    text-align: justify;
+}

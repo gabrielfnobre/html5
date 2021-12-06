@@ -1,0 +1,207 @@
+/*Todas as Caixas*/
+* {
+    box-sizing: border-box;  /*Aqui delimitamos que todas as caixas deverão obedecer ao tamanho padrão a borda e não poderão passar disso*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+/*Link de Header*/
+header a {
+    color: #666;  /*Cor natural do link sem ter sido visitado*/
+    text-decoration: none;  /*Retiramos o underline padrão dos links*/
+}
+
+/*Link já visitado*/
+header a:visited {
+    color: #000;  /*Cor do link depois de visitado*/
+    text-decoration: none;  /*Retiramos a decoração do link visitado*/
+}
+
+/*Quando passamos o mouse por cima do link*/
+header a:hover {
+    text-decoration: underline;  /*Colocamos o underline só quando o mouse passa por cima*/
+}
+
+/*Quando o link recebe a atenção principal*/
+header a:focus {
+    color: #D14E0E;  /*cor do link quando recebe foco*/
+}
+
+/*Link quando clicado*/
+header a:active {
+    color: rgb(252, 151, 35);  /*Cor do link clicado*/
+}
+
+/*Título do cabeçalho da nossa página*/
+header h1 {
+    font-size: 2.5em;  /*Tamanho 2,5 vezes o tamanho normal das fontes da página*/
+    text-align: center;  /*Texto centralizado*/
+    margin: 50px auto  /*50px encima e embaixo na margem, e aos lados temos auto para centralizar o texto*/
+}
+
+/*All Content of Section*/
+.content-center {
+    width: 100%;  /*Pode chegar a 100% numa tela pequena*/
+    max-width: 300px;  /*O máximo que pode chegar numa tela grande é 300px*/
+    margin: auto;  /*margens automáticas para centralizar a section*/
+    padding: 20px;  /*A section como um todo terá um padding interno*/ 
+    background-color: #FFF;  /*Designamos uma cor de fundo para toda a section*/
+    border-radius: 15px;  /*Demos uma borda arredondada em 15px para a section*/
+}
+
+/*div of Image*/
+.content-center .text-center {
+    text-align: center;  /*Apesar de só termos uma imagem, como ela é um texto no arquivo html, essa propriedade dá certo*/
+}
+
+/*image*/
+.content-center img {
+    width: 70%;  /*Aqui garantimos que a imagem só ocupe 70% da largura da tag pai que no caso é a div*/
+}
+
+/*Form*/
+.content-center form {
+    margin: 20px;  /*O formulário como um todo vai obedecer ao tamanho da margem de 20px para todos os lados*/
+}
+
+/*inputs e buttons*/
+.content-center input,
+.content-center button {
+    width:100%;  /*inputs e buttons vão ocupar 100% da area do formulário*/
+    padding: 10px, 5px;  /*E vão ter um espaçamento interno de 10px na altura e largura e 5px nos lados*/
+    border: none;  /*Tiramos a borda padrão do input e do button*/
+    outline: none;  /*Tiramos o outline que aparece quando clicamos no input e no button*/
+    padding: 5%;  /*Um pequeno padding para aumentar os campos de input e button*/
+}
+
+/*Inputs*/
+.content-center input {
+    border-bottom-color: #CCC;  /*Uma borda de baixo terá uma cor cinza leve*/
+    border-bottom-style: solid;  /*A borda é sólida*/
+    border-bottom-width: 2px;  /*Terá uma largura de apenas 2px*/
+    margin-bottom: 10px;  /*E uma pequena margem de baixo de 10px*/
+}
+
+/*Inputs quando recebem foco*/
+.content-center input:focus {
+    border-bottom-color: #D07335;  /*Uma linha de borda com cor diferenciada quando o input recebe foco*/
+}
+
+/*button*/
+.content-center button {
+    background-color: #D07335;  /*Muda para essa cor de fundo*/
+    color: #FFF;  /*Muda para essa letra*/
+}
+
+/*button quando passamos por cima com o mouse*/
+.content-center button:hover {
+    background-color: #B55B28;  /*Muda para essa cor o fundo*/
+    cursor: pointer;  /*Cursor do mouse vira mãozinha*/
+}
+
+/*button quando clicamos com o mouse*/
+.content-center button:active {
+    background-color: #C14E0E;  /*Muda para essa cor de fundo*/
+}
+
+/*Cabeçalho*/
+footer {
+    font-size: .8em;  /*Um texto um pouquinho menos para chamar menos atenção para o cabeçalho*/
+    text-align: center;  /*Alinhamos o texto no centro*/
+}
+
+/*Tabuada*/
+.content-tabuada {
+    width: 100%;  /*A div ganha 100% da tela em dispositivos de largura menor que 450px*/
+    text-align: center;  /*Centralizamos todos os textos da div no meio*/
+    max-width: 450px;  /*damos a div a largura máxima de 450px*/
+    background-color: #FFF;  /*cor de fundo da div*/
+    margin: auto;  /*centralizamos a div no centro da tela*/
+    padding: 20px;  /*Uma largura interna de 20px para todos os elementos da div*/
+}
+
+/*Aréa da tabela da Tabuada*/
+.content-tabuada table {
+    width: 100%;  /*Fica em 100% do tamanho da div que a comporta*/
+    border-collapse: collapse;  /*Sem bordas de colapso*/
+}
+
+/*Colunas da Tabuada*/
+.content-tabuada td {
+    padding: .75em;  /*Espaçamento interdo de 0.75em*/
+    border-top: 1px solid #DEE2E6;  /*Borda de cima sólida em 1px de cor cinza fraco*/
+}
+
+/*Estilo zebrado da tabuada*/
+.content-tabuada tbody tr:nth-child(odd){  /*odd faz o estilo zebrado começar á partir do primeiro elemento*/
+    background-color: rgba(0,0,0,.05);  /*Teremos um preto com a transparência de 5% entre as cores brancas já existentes*/
+}
+
+/*Estilo para quando o mouse passar por cima das linhas da tabela*/
+.content-tabuada tbody tr:hover{
+    background-color: rgba(0, 0, 0, 0.15); /*Um preto com menos transparência que as linhas zebradas*/
+    cursor: pointer;  /*Mudamos para um cursor pointer quando atingimos as linhas da tabela*/
+}
+
+/*Input da Tabuada*/
+#valorA {
+    width: 100%;
+    padding: 10px;
+}
+
+
+/*LISTA DE TAREFAS*/
+/*Formatação da lista desordenada*/
+.toDo {
+    list-style: none;
+    padding: 0;
+}
+
+/*Formatação dos itens da lista*/
+.toDo li{
+    padding: 10px;
+    border-bottom: #CCC 1px solid ;
+}
+
+/*Formatação dos checkboxes*/
+.toDo li input {
+    width: initial;
+    margin-right: 10px;
+}
+
+/*Formatação dos itens que já forem completados*/
+.toDo li.complete {
+    text-decoration: line-through;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/*Formatação dos inputs para colocar novas tarefas*/
+#new-task {
+    width: 100%;
+    padding: 10px;
+}
+
+/*Formatação dos botões para excluir tarefa*/
+.toDo button {
+    width: initial;
+    color:#FFF;
+    background-color: red;
+    float: right;
+    font-weight: bold;
+    min-width: 30px;
+    padding: 7px;
+}
+
+/*Formatação quando o mouse está sobre o botão de exclusão*/
+.toDo button:hover {
+    background-color: rgb(172, 5, 5);
+}
+
+/*Formatação quando o mouse clica sobre o botão de exclusão*/
+.toDo button:active {
+    background-color: rgb(255, 71, 71);
+}

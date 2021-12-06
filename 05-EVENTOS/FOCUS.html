@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOCUS</title>
+</head>
+
+<!-- Evento: focus .
+
+        - focus: é um evento que ocorre sempre que um elemento da nossa página recebe o focus principal.
+        - Podemos usar esse evento sobre a nossa página, ou sobre um elemento específico da nossa página.
+        - Toda vez que clicarmos encima do elemento - ou no caso da página, maximizarmos ela - o evento focus é acionado.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onfocus="debug(event)">
+    <!-- Perceba que no caso da página, para que o focus aconteça, a nossa página tem de receber o focus principal -->
+
+    <input type="text" onfocus="debug(event)">
+    <!-- No caso do input, para que ele receba o focus, o input tem que ser clicado com o mouse, ou ser acionado via tab -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

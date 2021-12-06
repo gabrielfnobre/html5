@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCROLL</title>
+</head>
+
+<!-- Evento: scroll (rolagem)
+
+    - scroll: esse evento acontece sempre que rolamos um elemento causando alterações na sua barra de rolagem, seja mexendo na própria barra de rolagem, na rodinha do mouse, page up, page down ou qualquer outra forma de rolar uma página.
+    - Atenção! Esse elemento, só funciona em elementos que possuam barra de rolagem.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body onscroll="debug(event)" style="height: 200vh;">
+<!-- Perceba que, quando rolamos a página o evento acontece, usamos um style para duplicar o tamanho do body -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

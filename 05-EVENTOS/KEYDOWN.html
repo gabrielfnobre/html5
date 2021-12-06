@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEYDOWN</title>
+</head>
+
+<!-- Evento: keydown (keyword down - teclando).
+
+        - keydown: é um evento que ocorre sempre que uma tecla qualquer do teclado é apertada.
+        - Esse é o que chamamos de evento de teclado, pois é o teclado que aciona esse tipo de evento. 
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <input type="text" onkeydown="debug(event)">
+    <!-- Perceba que a medida que você vai apertando as teclas no teclado, o keydown vai contabilizando no console -->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

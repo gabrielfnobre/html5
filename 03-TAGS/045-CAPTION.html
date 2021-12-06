@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>CAPTION</title>
+</head>
+<body>
+    <!-- A tag caption (legenda) é usada para definir uma legenda sobre uma tabela, essa tag deve ser inserida imediatamente após a tag table para inserir uma legenda sobre a tabela.-->
+    <!-- a TAG caption abre e fecha, usando como conteúdo a descrição da nossa legenda -->
+    <!-- O estilo CSS padrão da tag caption é:
+        caption {
+            display: table-caption;
+            text-align: center;
+        }
+    -->
+
+    <table>
+        <caption>Nome da Tabela</caption>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>a1</td>
+                <td>b1</td>
+                <td>c1</td>
+            </tr>
+            <tr>
+                <td>a2</td>
+                <td>b2</td>
+                <td>c2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>b3</td>
+                <td>c3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rodapé1</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Perceba que cada coluna agora tem um estilo diferente apesar de estarem todas em colgroup.</h1>
+
+</body>
+</html>

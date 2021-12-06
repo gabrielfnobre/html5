@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT</title>
+</head>
+<body>
+    <!-- OBJETIVO:
+            A tag "object" é uma tag onde incorporamos um arquivo que não pode ser lido pelo navegador, para que o navegador busque no sistema operacional alguma aplicação que possa executar esse arquivo na página. Por através da tag "object" podemos incorporar arquivos como: áudio, vídeo, applets Java, ActiveX, PDF e etc.
+        OBSERVAÇÕES:
+            A tag "object" possuí alguns atributos próprios dela, como por exemplo:
+
+            => "data":
+                esse atributo é utilizado para definir a URL do arquivo que iremos colocar dentro da tag "object";
+
+            => "form":
+                esse atributo faz com que possamos vincular uma tag object dentro de um formulário, além disso, mesmo que nossa tag não esteja dentro do formulário, ainda podemos vinculá-la ao formulário por através de um ID;
+
+            => "heigth":
+                esse atributo é usado para definir a altura do campo objeto em pixels;
+
+            => "name":
+                é usado simplesmente para definir um nome para o nosso objeto;
+
+            => "type":
+                é usado para definir o tipo de arquivo que estamos incluindo na tag "object";
+
+            => "usemap":
+                é usado para definir um mapa de navegação no arquivo incorporado a tag "object";
+
+            => "width":
+                é usado para definir a largura da tag "object";
+
+            O estilo CSS padrão da tag "object" é:
+                object:focus {
+                    outline: none; //Quando damos foco no objeto ele não transbordará para fora da linha;
+                }
+
+        EXEMPLO:
+            No exemplo abaixo, abrindo o navegador, poderemos ver como o arquivo pdf foi incorporado á página;
+    -->
+    <object data="../01-FUNDAMENTOS/02-Fundamentos_TAGS/object-object.pdf" type="application/pdf" height="800px" width="600px"></object>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABORT</title>
+</head>
+
+<!-- Evento: abort (abortar).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - abort: é um evento que ocorre sempre que uma mídia é abortada (ou seja, o carregamento é abortado) por falta de conexão entre o servidor e o cliente.
+        - Atenção! Esse é um evento super difícil de ser visualizado, para que ele seja visualizado é preciso que:
+            * a conexão com a internet esteja lenta;
+            * o servidor fique fora do ar;
+            * haja qualquer tipo de delay por parte da conexão a ponto do vídeo não ser carregado totalmente.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls onabort="debug(event)"></video>
+    <!-- O evento abort está atribuído ao vídeo acima, pode ser que não dê para visualizar o evento acontecendo, pois é preciso haver queda na conexão entre cliente e servidor -->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

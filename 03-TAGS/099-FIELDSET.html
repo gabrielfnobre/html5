@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIELDSET</title>
+</head>
+
+<!-- Tag fieldset (conjunto de campos)
+    
+    - Essa Tag é usada para definir um grupo de campos de formulário.
+    - Essa tag desenha uma caixa ao redor dos campos agrupados.
+    - Podemos também ter uma legenda para o grupo de formulários por através da tag legend.
+    - Essa tag pode utilizar todos os atributos glogais.
+    - Mas ela também possuí atributos específicos, como:
+
+        disabled: Define que um grupo de campos dentro da tag fieldset está desabilitado, isso é muito prático para não 
+                    precisarmos dar disable em cada input. Valor: disabled.
+
+        form: Define a qual formulário essa grupo de campos agrupados pertence. Valor: ID do formulário.
+
+        name: Define um nome para o grupo de campos. Valor: Texto.
+    
+    - O CSS padrão dela é:
+            
+        fieldset {
+            display: block;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding-top: 0.35em;
+            padding-bottom: 0.025em;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            border: 2px groove (internal value);
+        }
+
+-->
+
+<body>
+    
+    <fieldset>
+
+        <input type="text" name="zipcode" placeholder="CEP...">
+        <input type="text" name="address" placeholder="Endereço">
+        <input type="text" name="complement" placeholder="Complemento">
+        <input type="text" name="district" placeholder="Bairro">
+        <input type="text" name="city" placeholder="Cidade">
+        <input type="text" name="state" placeholder="Estado">
+        <input type="text" name="country" placeholder="País">
+
+    </fieldset>
+
+    <!-- Perceba que todos os campos estão resguardados pelo campo -->
+
+</body>
+</html>

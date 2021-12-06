@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUR</title>
+</head>
+
+<!-- Evento: blur (desfocada, borrada).
+
+        - blur: é um evento que ocorre a página perde o foco principal, isso pode acontecer quando uma página é minimizada ou quando outra página ou aplicação têm a atenção principal.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onblur="debug(event)">
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console. Para isso fique alternando o foco entre a página e outras páginas que possam estar abertas, você vai ver que toda vez que a página "BLUR" perder o foco o console será acionado.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGE</title>
+</head>
+
+<!-- Evento: change (mudança).
+
+        - change: é um evento que ocorre sempre que um valor é alterado.
+        - Esse evento é mais utilizado em formulários e campos onde o usuário poderá alterar alguma informação.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <input type="text" onchange="debug(event)">
+    <!-- Perceba que atribuímos o evento "change" a entrada de dados de um input, perceba que toda vez que entramos com valores neste campo e causamos uma mudança nos valores do campo, o "change" acontece -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console. Coloque valores diferentes no campo de entrada do input, e veja que toda vez que enviamos os valores para o navegador, o change é acionado.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

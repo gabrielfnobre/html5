@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEYUP</title>
+</head>
+
+<!-- Evento: keyup (tecla solta)
+
+    - keyup: vai causar algum comportamento quando um tecla qualquer do teclado for solta depois de ter sido pressionada.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body>
+
+    <input type="text" onkeyup="debug(event)">
+
+    <script>
+        function debug(e) {
+            alert('Evento: ' + e.type + ' foi disparado!');
+        }
+        // Perceba que, toda vez que você solta a tecla, a janela de alerta é disparada
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

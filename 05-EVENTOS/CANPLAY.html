@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANPLAY</title>
+</head>
+
+<!-- Evento: canplay (pode dar play).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - canplay: é um evento que ocorre sempre que um arquivo de mídia já está pronto para darmos o play, mesmo que o arquivo não esteja carregado totalmente e não seja possível visualizá-lo até o fim, se pudermos dar play nele, o evento canplay acontece.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls oncanplay="debug(event)"></video>
+    <!-- Perceba que o canplay acontece assim que o vídeo é carregado para pudermos dar play nele, mesmo que o vídeo não tenha sido carregado até o final -->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

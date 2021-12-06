@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARQUEE</title>
+</head>
+
+<!-- Tag marquee (??)
+    
+    - Essa Tag é usada para definir uma área de rolagem de texto, como se fosse um letreiro digital.
+    - Essa tag pode utilizar todos os atributos glogais.
+    - Mas essa tag também possuí alguns atributos específicos, como:
+
+        behavior: Define como o texto será rolado. Valor:   scroll
+                                                            slide
+                                                            alternate
+
+        direction: Define qual será a direção. Valor:   left
+                                                        right
+                                                        up
+                                                        down
+
+        height: Define a altura da área. Valor: Número
+
+        loop: Define o número de vezes que a rolagem será rolada. Valor: Número
+
+        scrollamount: Define a quantidade de rolagem em cada intervalo. Valor: Número
+
+        scrolldelay: Define o intervalo entre cada movimento de rolagem. Valor: Número
+
+        width: Define a largura da área. Valor: Número
+    
+    - O CSS padrão dela é:
+            
+        nenhum
+
+-->
+
+<body>
+    
+    <marquee direction="up">Hcode Treinamentos</marquee>
+    <!-- Perceba que o marquee joga o texto para cima -->
+    
+    <marquee direction="down" width="250" height="200" behavior="alternate" style="border: red 1px solid">Hcode Treinamentos</marquee>
+    <!-- Perceba que esse marquee vai jogar o texto para baixo, mas como termos um behavior alternate ele vai jogar para cima quando o texto bater na borda da caixa -->
+
+    <marquee direction="down" width="250" height="200" behavior="alternate" style="border: red 1px solid">
+    
+        <marquee behavior="alternate" >Hcode</marquee>
+
+    </marquee>
+    <!-- Perceba que por termos um marquee dentro de outro o texto não só é alternado de cima para baixo, como dos lados também -->
+
+</body>
+</html>

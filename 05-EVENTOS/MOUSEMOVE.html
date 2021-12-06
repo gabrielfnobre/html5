@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSEMOVE</title>
+    <style>
+        div {
+            height: 50vh;
+            width: 50vh;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<!-- Evento: mousemove
+
+    - mousemove: vai causar algum comportamento quando o cursor do mouse se mover sobre um determinado elemento.
+    - Enquanto o cursor estiver dentro do elemento, o evento está acontecendo, no momento que o cursor for para fora, o evento para de acontecer.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body>
+
+    <div onmousemove="debug(event)"></div>
+    <!-- Criamos um div como o evento mousemove, perceba que, enquanto o cursor está sobre a div o evento vai acontecendo, quando o cursor sai de dentro da div, o evento para de acontecer. -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

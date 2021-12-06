@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESET</title>
+</head>
+
+<!-- Evento: reset (resetar).
+
+        - reset: é um evento que ocorre sempre em um formulário, ele é acionado quando usamos um botão para resetar, ou limpar um formulário.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <form onreset="debug(event)">
+    <!-- O reset deve ser usado sempre na tag "form", ele fará referência automática ao botão reset que estiver dentro do formulário -->
+        <input type="text">
+        <button type="reset">Limpar</button>
+        <!-- Perceba que toda vez que acionamos o reset, o console captura um comportamento do evento acontecendo -->
+    </form>
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

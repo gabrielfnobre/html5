@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOADSTART</title>
+</head>
+
+<!-- Evento: loadstart (início do carregamento).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - loadstart: é um evento que ocorre sempre que os dados (sejam eles dados normais ou metadados) começam a ser carregados.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" 
+    onloadeddata="debug(event)" 
+    onloadstart="debug(event)"
+    ondurationchange="debug(event)" 
+    oncanplay="debug(event)" 
+    onloadedmetadata="debug(event)" 
+    controls>
+    </video>
+    <!-- Perceba que vamos ter aqui 5 eventos para acontecer: durationchange, loadeddata, loadedmetadata, loadstart e canplay. Perceba a ordem dos eventos: 
+        1º Vamos ter o loadstart, pois esse é o evento que mostra que dados, sejam eles metadados ou não, estão começando a ser baixados;
+        2º Vamos ter o durationchange acontecendo, pois os dados de duração de vídeo também são uma informação que é carregada nos metadados; 
+        3º Vamos ter o loadedmetadata, que acontece quando os metadados são carregados, como os metadados são carregados antes dos dados, ele acontece primeiro. E ele acontece depois do durationchange, por que a duração do vídeo é apenas 1 metadado, o loadedmetadata espera que todos os metadados sejam carregados;
+        4º Vamos ter o loadeddata, que acontece quando dos os dados são carregados;
+        5º Por fim, vamos ter o canplay, quando já temos dados o suficiente para dar play no vídeo.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

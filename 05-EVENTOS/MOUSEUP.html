@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSEUP</title>
+    <style>
+        div{
+            height: 50vh;
+            width: 50vh;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<!-- Evento: mouseup (mouse para cima).
+
+        - mouseup: é um evento que ocorre sempre que o botão do mouse é solto depois de ter sido pressionado.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <button onmouseup="debug(event)">Click Aqui!</button>
+    <!-- Perceba que toda vez que soltamos o botão do mouse depois de pressioná-lo o evento mouseup acontece... -->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

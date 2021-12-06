@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+        header, footer {
+            height: 10vh;
+            background-color: #ccc;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+        }
+        main {
+            height: 80vh;
+            background-color: #999;
+            flex: 3;
+        }
+        aside {
+            height: 80vh;
+            background-color: gold;
+            width: 20vh;
+        }
+    </style>
+    <title>ASIDE</title>
+</head>
+<body>
+    <!-- Tag aside (á parte, ao lado)
+    
+        - Essa Tag é usada para definir um conteúdo ao lado de um artigo, como uma propaganda, um formulário ao lado do texto.
+        - Importante semânticamente para o conteúdo que estamos mostrando na tela.
+        - A tag aside pode utilizar todos os atributos glogais.
+        - O CSS padrão dela é:
+            
+            aside {    
+                display: block;
+            }
+    -->
+
+    <header>
+    </header>
+
+    <section> <!--Perceba que usamos o section como um wrap para amarrar todas as tags que devem estar dentro da section-->
+        <main>
+        </main>
+
+        <aside> <!--Apesar da tag aside estar sendo escrita abaixo da tag main, por ela estar dentro da section, semanticamente falando, o navegador saberá que esse aside pertence ao mesmo conteúdo amarrado pela section e deve 
+        estar ao lado da tag main-->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quasi qui sunt odit deleniti praesentium minus. Amet unde, maxime ullam blanditiis soluta obcaecati quam deleniti! Ut sint quis animi architecto.</p>
+        </aside>
+
+        <footer>
+        </footer>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>METER</title>
+</head>
+
+<!-- Tag meter (medidor)
+    
+        - Essa Tag é usada para definir uma medida dentro de um intervalo.
+        - Podemos usar essa tag para mostrar a medida de uma barra de progresso em um vídeo, para mostrar um espaço de armazenamento em um banco de dados online.
+        - Essa tag pode utilizar todos os atributos glogais.
+        - Mas essa tag também possuí atributos específicos, como:
+
+            form: Define á qual formulário o medidor pertence. Valor: ID do formulário.
+
+            high: Define a partir de qual valor deve ser considerado um valor alto. Valor: Número.
+
+            low: Define á partir de qual valor deve ser considerado um valor baixo. Valor: Número.
+
+            max: Define um valor máximo. Valor: Número.
+
+            min: Define um valor mínimo. Valor: Número.
+
+            optimum: Define um valor ideal para o medidor. Valor: Número.
+
+            value: Define o valor atual. Valor: Número.
+        
+        - O CSS padrão dela é:
+            
+            nenhum
+
+-->
+
+<body>
+
+    <meter min="0" max="100" high="90" low="10" optimum="50" value="30"></meter><br>
+    <!-- Você vai perceber que ele mostra apenas uma barra de progresso. -->
+
+    <meter min="0" max="100" high="90" low="10" optimum="50" value="95"></meter><br>
+    <!-- Veja a barra atingindo o valor alto -->
+
+    <meter min="0" max="100" high="90" low="10" optimum="50" value="50"></meter><br>
+    <!-- Veja a barra atingindo o valor adequado -->
+
+    <meter min="0" max="100" high="90" low="10" optimum="50" value="7"></meter><br>
+    <!-- Veja a barra atingindo o valor baixo -->
+
+</body>
+</html>

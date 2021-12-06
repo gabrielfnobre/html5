@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNLOAD</title>
+</head>
+
+<!-- Evento: unload.
+
+        - unload: é um evento que ocorre DEPOIS que uma página foi descarregada.
+        - Atenção! Ele é diferente do beforeunload, que acontece antes da página ser descarregada.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onunload="return debug(event)">
+    <!-- Assim como o beforeunload, o "unload" é um evento muito utilizado pelos desenvolvedores para adicionar comportamentos depois de um usuário ter fechado a tela. Esses comportamentos são adicionados para fazer com que o usuário ainda mantenha algum contato com a página fechada, mesmo que de alguma forma. Por isso, para dificultar a vida do desenvolvedor, alguns navegadores só aceitam o "unload" atribuído a um return -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+            return alert('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console. Pois o "unload" é um evento que acontece assim que a página é fechada, mas ao mesmo tempo ele acontece na página, ou seja, para visualizá-lo é muito dificíl, por isso seria melhor visualizá-lo no console. Use o F5 para descarregar e carregar a página várias vezes até que você consiga visualizá-lo no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

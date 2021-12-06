@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>COLGROUP</title>
+</head>
+<body>
+    <!-- A tag colgroup é usada para definir propriedades em CSS para um conjunto de células que formam colunas numa tabela, em vez de estilizar as células uma por uma, podemos estilizar todas em conjunto usando a tag colgroup. -->
+    <!-- a TAG colgroup abre e fecha -->
+    <!-- A tag colgroup usa um atributo especial para ela, que é o:
+            => span: Define o número de colunas que o grupo vai abranger, como valor desse atributo usamos números.
+    -->
+    <!-- O estilo CSS padrão da tag colgroup é:
+            colgroup {
+                display: table-column-group;
+            }
+    -->
+
+    <table>
+        <colgroup span="2" style="background-color: chartreuse;"></colgroup> 
+            <!--Aqui usamos colgroup para estilizar 2 colunas da tabela...-->
+        <thead>
+            <tr>
+                <th sorted="reversed">Header 1</th>
+                <th abbr="Jan">Janeiro</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">a1</td>
+                <td>c1</td>
+            </tr>
+            <tr>
+                <td>a2</td>
+                <td rowspan="2">b2</td>
+                <td>c2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>c3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rodapé1</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Perceba que tanto as colunas header 1 e Janeiro receberam cores verdes, isso acontece por que o colgroup foi usado sobre as 2 primeiras colunas</h1>
+
+</body>
+</html>

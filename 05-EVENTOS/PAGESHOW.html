@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGESHOW</title>
+</head>
+
+<!-- Evento: pageshow.
+
+        - pageshow: é um evento que ocorre quando uma página é exibida para o usuário.
+        - Atenção, o evento pageshow parece muito com o evento load, mas existe uma grande diferença entre eles!
+        - O load é carregado assim que uma página é chamada na tela.
+        - O pageshow é carregado assim que uma página é totalmente renderizada.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onpageshow="debug(event)" onload="debug(event)">
+    <!-- Note que apesar do evento pageshow ter sido declarado primeiro, oque é carregado antes é o load, por que ele é carregado assim que a página é chamada. O pageshow virá logo em sequência após ele. -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+            alert('Evento: ' + e.type + ' Está acontecendo neste momento.');
+        }
+        // Para ter uma visão melhor dos eventos acontecendo veja no console que um é carregado após do outro.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

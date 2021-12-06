@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE</title>
+</head>
+<body>
+    <!-- A tag template é usada para definir um contêiner para código HTML que desejamos renderizar posteriormente, ou seja a página é renderizada primeiro e o que está dentro do template é renderizado depois -->
+    <!-- a TAG template abre e fecha -->
+    <!-- Essa tag não tem CSS padrão -->
+
+    <template id="tpl-1">
+        <li>{{name}}</li> <!--Os colchetes duplos são usados pelo javascript para referênciar alguma variável-->
+    </template>
+
+    <ul>
+
+    </ul>
+
+    <!--Essa programação javascript faz com que o conteúdo do nosso template seja apenas uma cópia e não próprio arquivo em si-->
+    <button type="button">Add</button>
+    <p>Aperte o botão e adicione o conteúdo a lista</p>
+
+    <script>
+        const btn = document.querySelector('button');
+        const template = document.querySelector('#tpl-1');
+        const ul = document.querySelector('ul')
+
+        btn.addEventListener('click', e =>{
+
+            ul.append(template.content.cloneNode(true));
+
+        })
+
+    </script>
+
+    <!-- Imaginemos que estamos usando uma lista dentro de um banco de dados, e esse banco de dados deve ser carregado para só depois trazer seu conteúdo para a página HTML, como esses dados vão ser renderizados só posteriormente, em vez de gastar dados renderizando esses dados, colocamos dentro de um template, para que eles sejam renderizados depois -->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBMIT</title>
+</head>
+
+<!-- Evento: submit (enviar).
+
+        - submit: é um evento que ocorre sempre que um formulário é enviado, ou seja, quando um botão submit é acionado.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <form onsubmit="debug(event)">
+    <!-- Perceba que o evento submit deverá ser declarado diretamente sobre a tag form -->
+        <input type="text" onselect="debug(event)">
+        <button type="submit">Enviar</button>
+        <!-- Perceba que toda vez que apertamos no enviar o console registra o comportamento do submit, mas como o comportamento padrão da página é atualizar logo após um envio, o comportamento do console desaparece rápído. Por isso, podemos apertar o botão de enviar várias vezes para ver o comportamento no console. -->
+    </form>
+
+   <script>
+        function debug(e) {
+            e.preventDefault()
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

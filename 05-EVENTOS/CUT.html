@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUT</title>
+</head>
+
+<!-- Evento: cut (recortar)
+
+    - cut: esse evento acontece sempre que tentamos recortar um elemento ao qual o evento está declarado.
+    - Esse evento acontece de pai para filho também, se o atribuirmos sobre um elemento pai, os filhos vão copíar o comportamento dele.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body oncut="debug(event)">
+    <!-- Perceba que declaramos o evento cut como pai, isso significa que em qualquer elemento dentro do body é possível ver o cut acontecendo -->
+
+    <input type="text">
+    <!-- Incluimos um input para podermos escrever e recortar de verdade -->
+
+    <p oncopy="debug(event)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet dignissimos eius accusantium vero repellat? Aperiam quibusdam cum odit similique nemo natus eligendi, minima officia quo quae impedit, consectetur dignissimos! Modi?</p>
+    <!-- Perceba que somente nesse parágrafo é possível recortar e copiar visualizando os eventos, já que o copy está declarado somente nele, mas o cut foi declarado ao seu elemento pai -->
+
+    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur sed architecto tempora dolorem accusamus mollitia, adipisci eius corrupti minus dicta inventore similique ex iure corporis dignissimos possimus minima ducimus alias!</P>
+    <!-- Nsse parágrafo o copy não é possível, mas o cut sim, por que está sobre o seu elemento pai -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

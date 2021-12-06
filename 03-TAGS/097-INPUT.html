@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INPUT</title>
+</head>
+
+<!-- Tag input (inserir)
+    
+        - Essa Tag é usada para definir um campo de entrada para o formulário.
+        - Um campo de entrada serve para que o usuário possa inserir dados ou interagir com a página do formulário.
+        - A tag input pode variar entre várias formas dependendo do atributo type dela.
+        - Essa tag pode utilizar todos os atributos glogais.
+        - Mas essa tag também tem muitos atributos específicos, que são:
+
+            * accept: Define o tipo de arquivo aceito para ser selecionado. (Isso só se aplica se o input for file, ou seja,    
+                        quando temos um campo de entrada de arquivo. Por através dele podemos definir qual é o tipo de arquivos que aceitamos naquele campo, se é imagem, word, pdf e etc.)
+
+            * alt: Define um texto alternativo. (O atributo alt só se aplica se o type do input for uma imagem)
+            
+            * autocomplete: Define se o campo pode ter habilitado o auto completar do navegador ou não. Valor: on, off.
+            
+            * autofocus: Define o foco neste campo quando a página é carregada. Lembrando que é bom você ter somente um campo   
+                            com autofocus, do contrário isso pode gerar uma confusão na página de onde ela deverá focar primeiro durante o carregamento. Valor: autofocus.
+            
+            * checked: Define se o campo já virá marcado/selecionado. (Só se aplica quando o atributo type tem o valor 
+                        checkbox ou radio) Valor: checked.
+            
+            * dirname: Define o nome do campo que será enviado informando a direção do texto escrito. Valor: NomeDoInput.dir
+            
+            * disabled: Define o campo como desabilitado, ou seja, mesmo que esteja ali o usuário não vai poder interagir com 
+                        esse campo. Valor: disabled.
+            
+            * form: Define qual o formulário que esse campo pertence. Valor: ID do formulário
+            
+            * formaction: Define qual a URL de envio desse campo. (Se aplica apenas quando o atributo type tem o valor submit 
+                            ou image)
+            
+            * formenctype: Define qual o enctype do formulário ao enviar esse campo. (Se aplica apenas quando o atributo type 
+                            tem o valor submit ou image) Valores:
+                                                                application/x-www-form-urlencoded
+                                                                multipart/form-data
+                                                                text/plain
+ 
+            * formmethod: Define qual será o método do formulário ao clicar neste botão. (Se aplica apenas quando o atributo 
+                            type tem o valor submit ou image) Valores: get, post.
+            
+            * formnovalidate: Desativa a validação do formulário ao clicar neste botão.
+            
+            * formtarget: Define qual será o target do formulário ao clicar neste botão. (Se aplica apenas quando o atributo 
+                            type tem o valor submit ou image) Valores:
+                                                                        _blank
+                                                                        _self
+                                                                        _parent
+                                                                        _top
+                                                                        nome do frame
+
+            * height: Define a altura do campo. (Se aplica apenas quando o atributo type tem o valor image) Valor: Número.
+            
+            * list: Define qual tag datalist está vinculada com este campo. Valor: ID do datalist.
+            
+            * max: Define um valor máximo. (Só aplica aos types number e date) Valor: Número ou Data
+            
+            * maxlength: Define um comprimento máximo de caracteres. Valor: Número.
+            
+            * min: Define um valor mínimo. Valor: Número ou Data.
+            
+            * multiple: Define se o usuário pode entrar com mais de uma valor neste campo. (Se aplica apenas quando o atributo 
+                        type tem o valor file) Valor: multiple.
+            
+            * name: Define o nome do campo. Valor: Texto.
+            
+            * pattern: Define uma expressão regular para validação do campo. Valor: Expressão Regular.
+
+            * placeholder: Define um texto de dica que descreve o valor esperado. Valor: Texto.
+            
+            * readonly: Define o campo como somente leitura. Valor: readonly.
+            
+            * required: Define o campo como obrigatório para envio do formulário. Valor: required.
+            
+            * size: Define a largura, em caracteres do campo. Valor: Número.
+            
+            * src: Define a fonte do arquivo. (Se aplica apenas quando o atributo type tem o valor image) Valor: URL.
+            
+            * step: Define o intervalo de número permitidos. (Se aplica apenas quando o atributo type tem o valor number)
+                    Valor: Número.
+            
+            * type: Define o tipo de campo. Valores:
+                                                    button
+                                                    checkbox
+                                                    color
+                                                    date
+                                                    datetime-local
+                                                    email
+                                                    file
+                                                    hidden
+                                                    image
+                                                    month
+                                                    number
+                                                    password
+                                                    radio
+                                                    range
+                                                    reset
+                                                    search
+                                                    submit
+                                                    tel
+                                                    text
+                                                    time
+                                                    url
+                                                    week
+            
+            * value: Define o valor inicial do campo. Valor: Texto.
+            
+            * width: Define a largura do campo. (Se aplica apenas quando o atributo type tem o valor image) Valor: Número.
+
+        - O CSS padrão dela é:
+            
+            Nenhum
+
+-->
+
+<body>
+
+    <form action="/send" method="post" target="_blank" enctype="multipart/form-data">
+
+        <input type="text"><br>
+        <!-- Para inserir textos -->
+
+        <input type="checkbox" name="gender" checked><br>
+        <input type="checkbox" name="gender"><br>
+        <!-- Abre uma caixinha de checagem, com checked ele já vem marcado, o checkbox podemos marcar mais de um que contenha o mesmo nome dentro de um wrap -->
+        
+        <input type="radio" name="gender" checked value="Masculino"><br>
+        <input type="radio" name="gender" value="Feminino"><br>
+        <!-- Abre uma caixinha redonda para marcação, podemos usar checked para que já venha marcado, mas se tivermos 2 radio com o mesmo nome, um será marcado enquanto o outro não -->
+        
+        <input type="color" value="#FF0000"><br>
+        <!-- Para que o usuário escolha uma cor, podemos usar uma cor por padrão no value, atenção o value só usa cores hexadecimais-->
+        
+        <input type="date"><br>
+        <!-- Para definir uma data... -->
+
+        <input type="datetime-local"><br>
+        <!-- Define não só uma data, como também horas -->
+
+        <input type="email">
+        <input type="submit" value="OK"><br>
+        <!-- o input email serve para que um usuário possa escrever um email dentro do campo, mas a validação desse campo só funciona se ele vier acompanhado de um input submit que vai avaliar se o que foi escrito contém "@" e algo escrito após o "@". Além disso, para essa validação funcionar, ambos os inputs devem estar dentro de um form-->
+
+        <input type="file" accept="image/png" multiple><br>
+        <!-- com esse input conseguimos enviar arquivos por através do formulário, e podemos definir que tipo de arquivo podemos aceitar ou não, como por exemplo, aqui definimos que só arquivos imagem png são aceitos. Usamos também o atributo "multiple" que permite que selecionemos mais de um arquivo, faça o texto e escolha mais de uma imagem png.-->
+
+        <input type="hidden">
+        <!-- Esse input sempre fica oculto, a ideia desse input é enviar informações junto ao formulário que não ficam visíveis ao usuário, informações por debaixo dos panos por assim dizer. Fazemos isso por através dos atributos "name" (para dar um nome ao input hidden) e "value" (Que vai incluir o valor oculto que vai junto ao formulário).  -->
+
+        <input type="month"><br>
+        <!-- Esse é um input para que o usuário escolha um mês, ele não deixa que escolhamos um dia, somente o mês mesmo -->
+
+        <input type="number" step="2"><br>
+        <!-- Esse input é usado para que um usuário possa escolher um número nos melhores navegadores ele não deixa que um texto seja escrito, somente números. Além disso alguns navegadores incluem uma seta para aumentar ou diminuir uma numeração. Usamos também o atributo "step" para que o número aumente ou diminua de 2 em 2 -->
+
+        <input type="password"><br>
+        <!-- Esse input é usado para incluir uma campo de senha para o formulário, esse campo por natureza faz com que o que for escrito não possa ser visualizado pelo usuário. -->
+
+        <input type="reset"><br>
+        <!-- Esse é um campo para limpar o formulário ao padrão, apagando as informações que foram escritas. -->
+
+        <input type="button" value="Botão"><br>
+        <!-- Esse é um input que cria um botão para ser usado para adicionar algum comportamento por através de JavaScript. -->
+
+        <input type="search"><br>
+        <!-- Esse é um input para adiconar um campo de busca na nossa página, claro que precisaremos também de um campo botão para adicionar um comportamento JavaScript que faça o item dentro do input realmente ser procurado -->
+
+        <input type="tel"><br>
+        <!-- Esse e um input que adiciona um campo para inclusão de telefone, esse input é semântico e é reconhecido como campo para telefone mesmo, a grande diferença desse campo vai ser para celulares, que automáticamente vão abrir o teclado numérico nesse campo. -->
+
+        <input type="time"><br>
+        <!-- Esse input é usado para determinar um horário, onde o usuário poderá escolher um horário, inclusive poderá usar uma setinha com opções de horários para colocar a hora que ele desejar -->
+
+        <input type="url"><br>
+        <!-- Esse é campo onde se espera que o usuário coloque o endereço de um site, ele tem validação, se não colocarmos uma URL, o campo mostra a URL não é válida. -->
+
+        <input type="week"><br>
+        <!-- Esse é um campo para que o usuário possa colocar uma determinada semana no campo, podemos escolher pela semana e ano. -->
+
+        <input type="range" min="0" max="100">
+        <!-- Esse é um campo para escolher um valor entre um número mínimo e um número máximo. Porém não vai mostrar os valores, vamos precisar de CSS ou JavaScript para visualizar os valores-->
+
+    </form>
+    <!-- Perceba como o formulário amarra todos os elementos de um formulário dentro de si mesmo -->
+
+</body>
+</html>

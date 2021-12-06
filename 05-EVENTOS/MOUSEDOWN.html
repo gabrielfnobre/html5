@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSEDOWN</title>
+</head>
+
+<!-- Evento: mousedown 
+
+    - mousedown: vai causar algum comportamento quando partamos o botão do mouse, e ele sabe que deve ir para baixo.
+    - Esse evento geralmente ocorre antes de um evento "click".
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body>
+
+    <button type="button" onclick="debug(event)" onmousedown="debug(event)">Click aqui!</button>
+    <!-- Perceba que colocamos os 2 eventos para ver quem ocorre primeiro, se é o mousedown ou o click -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver os 2 eventos acontecendo com mais clareza, um após o outro.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

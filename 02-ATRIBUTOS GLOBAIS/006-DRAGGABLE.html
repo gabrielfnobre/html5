@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, inictial-scale=1.0">
+        <title>DRAGGABLE</title>
+    </head>
+    <body>
+
+        <!-- OBJETIVO
+            O atributo "draggable" do inglês "arrastável" é um atributo global que tem a função de tornar qualquer elemento dentro de uma página arrastável por através do mouse. Geralmente quando temos arquivos e desejamos arrastá-los com o mouse e soltá-los em um determinado local para que sejam copiados ou transferidos, utilizamos o atributo global draggable.
+            OBSERVAÇÕES: o draggable só torna o elemento arratável, para soltá-lo num determinado local é preciso usar o atributo "dropzone" atribuído a esse local, assim conseguiremos soltá-lo, mas somente no local onde o "dropzone" está atribuído. Além disse, na data atual 22/02/2021 o html ainda não permite soltar elementos automáticamente no dropzone, é necessário programação JavaScript para isso.
+        -->
+        <!-- EXEMPLO
+            No exemplo abaixo podemos ver duas div's, onde a azul é arrastável e a vermelha não é. Note que mesmo arrastando as div's não podemos soltá-las no local que quisermos...
+        -->
+        <div style="background-color: red; width: 100px; height: 100px; color: white;" draggabel="false">Não arrastável</div>
+        <div style="background-color: blue; width: 100px; height: 100px; color: white;" draggable="true">Arrastável</div>
+        <p>Tente arrastá-las com o mouse</p>
+        <!-- OBSERVAÇÕES
+            Draggable pode ter dois valores "true" ou "false", se true o elemento se torna arrastável, se false ele fica estático.
+        -->
+
+    </body>
+</html>

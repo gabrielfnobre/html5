@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DURATIONCHANGE</title>
+</head>
+
+<!-- Evento: durationchange (durante a mudança).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - durationchange: é um evento que ocorre sempre que duração do nosso arquivo muda, por exemplo, quando carregamos o arquivo e a duração aparece, ou quando usamos arquivos de streaming, que o arquivo vai sendo carregado e a duração vai mudando, o durationchange acontece.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" ondurationchange="debug(event)">
+    </video>
+    <!-- Perceba que assim que o arquivo é carregado aparece o evento durationchange acontece.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTGROUP</title>
+</head>
+
+<!-- Tag optgroup (grupo de opções)
+    
+    - Essa Tag é usada para definir um grupo de opções como pertencentes a um único grupo.
+    - A tag optgroup serve como um wrap para as tags option que desejamos amarrar dentro de um único grupo.
+    - Essa tag pode utilizar todos os atributos glogais.
+    - Mas ela também possuí atributos específicos, como:
+
+        disabled: Define um grupo de opções que será desabilitado. Valor: disabled.
+
+        label: Define um rótulo para um determinado grupo de opções. Valor: label.
+    
+    - O CSS padrão dela é:
+            
+        nenhum
+
+-->
+
+<body>
+    
+    <select>
+        <!-- Perceba que é optgroup que amarra as opções -->
+        <optgroup label="Front-End">
+        <!-- Os labels servem só para dar títulos aos grupos -->
+            <option>HTML 5</option>
+            <option>CSS 3</option>
+            <option>JavaScript</option>
+        </optgroup>
+        <!-- Perceba que desabilitamos um grupo inteiro só atribuíndo disabled a tag optgroup -->
+        <optgroup label="Back-End" disabled>
+            <option>PHP 7</option>
+            <option>JavaScript</option>
+        </optgroup>
+    </select>
+
+    
+
+</body>
+</html>

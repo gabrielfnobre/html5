@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q</title>
+</head>
+
+<!-- Tag q (quote - citação)
+    
+        - Essa Tag é usada para definir uma citação simples e concisa de alguma outra página na internet por através de um link.
+        - Caso usemos uma citação grande, é preferível semânticamente que usemos a tag blockquote.
+        - A tag q pode utilizar todos os atridbutos glogais.
+        - Mas também podemos usar um atributo específico cite:
+
+            cite: define uma URL para a citação dentro de q, como valor do atributo recebe a URL.
+        
+        - O CSS padrão dela é:
+            
+            q {    
+                display: inline;  //se mantém na mesma linha
+            }
+
+            q:before {
+                content: open-quote;  //obrigatóriamente é inserido áspas de abertura
+            }
+
+            q:after {
+                content: close-quote   //obrigatóriamente é inserido áspas de fechamento
+            }
+
+        OBS: perceba que, assim como blockquote, ela só vai adicionar um peso semântico a citação, não vai adicionar nenhum comportamento especial visualmente falando.
+-->
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet, <q cite="https://www.jw.org/pt/">Leia a Bíblia on-line</q>consectetur adipisicing elit. Perferendis necessitatibus amet perspiciatis quam molestias officia? Consequuntur dolorum atque ab reprehenderit mollitia, eos laudantium dignissimos, magnam voluptate commodi, ea praesentium nisi.</p>
+    <!-- Perceba que a tag q é para citações pequenas -->
+
+</body>
+</html>

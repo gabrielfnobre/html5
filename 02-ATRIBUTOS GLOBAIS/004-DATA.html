@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data-*</title>
+    </head>
+
+    <body>
+
+        <!-- OBJETIVO:
+            O atributo data-* tem o objetivo de referenciar uma determinada informação sobre um elemento para que essa informação possa ser capturada e usada em outra aplicação fora do html, como por exemplo: Bancos de Dados e JavaScript. Podemos armazenar informações como "id", "class", "emails" e muitas outras informações relevantes dentro do atributo data. Ele é um atributo global, podendo ser usado em qualquer elemento do html.
+        -->
+
+        <!-- EXEMPLO:
+            No exemplo abaixo podemos ver o uso e a sintáxe do atributo global "data-*", usamos ele nesse caso para abrir referências ao id e ao email das tags "li" dentro de uma lista...
+        -->
+        <ul>
+            <li data-id="1" data-email="nobrecoder@gmail.com">Gabriel</li>
+            <li data-id="2" data-email="grazielasnobre@gmail.com">Graziela</li>
+        </ul>
+        <p>Inspecione os elementos "li" para ver as referências das tags data-* sendo expostas para uso em JavaScript...</p>
+        <!-- OBSERVAÇÕES
+            Perceba que para cada informação que desejamos referenciar utilizamos apenas 1 atributo "data" (não é necessário separá-los pelas vírgulas).
+        -->
+
+
+    </body>
+</html>

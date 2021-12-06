@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUTPUT</title>
+</head>
+
+<!-- Tag output (Resultado)
+    
+        - Essa Tag é usada para mostrar o resultado de um cálculo.
+        - Geralmente essa tag é usada em formulários, onde teremos um cálculo que apresentará uma mensagem na tela por através de output.
+        - Essa tag pode utilizar todos os atributos glogais.
+        - Mas a tag output também utiliza atributos específicos, como:
+
+            for: Define a relação entre o resultado e os elementos usados para o cálculo. Valor: ID do elemento.
+
+            form: Define a qual formulário esse campo pertence. Valor: ID do Formulário.
+
+            name: Define o nome do elemento. Valor: Texto.
+        
+        - O CSS padrão dela é:
+            
+            output {
+                display: inline;
+            }
+
+-->
+
+<body>
+
+    <h1>Mude o valor do Range e veja que o número que você colocar dentro do campo será somado ao range e apresentado no campo output</h1>
+
+    <form oninput= "c.value = parseInt(a.value) + parseInt(b.value)">
+        <!-- Perceba que usamos um evento JavaScript para gerar o comportamento do cálculo que somará o valor do range com o valor do input. Precisamos de usar parseInt para que os valores fossem convertidos e somados. -->
+        <!-- Perceba que a conta é feita entre os id's "a" e "b" e vai mostrar o resultado no output "c" -->
+
+        <input type="range" id="a" value="0" min="0" max="10">
+        <!-- Criamos um range e demos o id de "a" -->
+
+        <input type="number" id="b" value="0">
+        <!-- Criamos um input numérico e demos o id de "b" -->
+
+        <output name="c" for="a b"></output>
+        <!-- O output já é o id "c" que é justamente aquele que vai mostrar o valor do resultado da conta feita no evento oninput -->
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSEOVER</title>
+    <style>
+        div{
+            height: 50vh;
+            width: 50vh;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<!-- Evento: mouseover (mouse sobre).
+
+        - mouseover: é um evento que ocorre sempre que o cursor do mouse está sobre o elemento ao qual esse evento está vinculado.
+        - Ou seja, toda vez que o mouse entra no elemento, o evento mouseover acontece.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <div onmouseover="debug(event)"></div>
+    <!-- Perceba que toda vez que posicionamos o mouse sobre a div o evento mouseover ocorre... -->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

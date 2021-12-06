@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRACK</title>
+
+</head>
+<body>
+    <!-- "track" é usada para criar legendas dentro de arquivos de mídia, como vídeos por exemplo. Por exemplo, podemos ter várias tags track dentro de um vídeo, uma para cada idioma, e ela vai se adaptar ao idioma base do HTML para o usuário-->
+    <!-- Tag "track" só precisa ser aberta, o que significa que não podemos colocar conteúdos dentro dela -->
+    <!-- Essa tag possuí atributos específicos, como:
+            => default: define uma determinada faixa track como padrão;
+            => kind: define o tipo faixa de texto, que podem ser: captions, chapters, descriptions, metadata e subtitles;
+            => label: define um rótulo, ou seja um texto específico para ser usado como track, usamos o valor dessa maneira: nomeDoInput.dir;
+            => src: define um URL para a faixa de texto que passará no track;
+            => srclang: define qual é a linguagem do texto que será usado no track de acordo com algum código de linguagem.
+    -->
+    <!--CSS padrão de "track": Nenhum;
+    -->
+
+    <video src="031-video-AV1_trailer.mp4" controls width="800px">
+        <track src="034-track-AV1_trailer_pt.vtt" label="Português (Brasil)" kind="subtitles" srclang="pt-br" default>
+        <track src="034-track-AV1_trailer_jp.vtt" label= "Japonês" kind="subtitles" srclang="jp">
+    </video>
+    <!-- Por algum motivo o track no vídeo não carregou, pesquisar depois!!! -->
+
+
+</body>
+</html>

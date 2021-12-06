@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEFOREUNLOAD</title>
+</head>
+
+<!-- Evento: beforeunload.
+
+        - beforeunload: é um evento que ocorre antes de uma página ser descarregada.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onbeforeunload="return debug(event)">
+    <!-- Note que o evento beforeunload saí do padrão dos demais eventos, pois esse evento só vai acontecer se nós atribuirmos o comportamento a um "return". Por que isso? Por que muitos sites utilizam o beforunload como método de fazer com que um usuário não saia do site ou para exibição de propagandas. Então, para dificultar a vida do desenvolvedor que deseja aplicar o beforeunload dessa forma, ele sempre deve ser atribuído a um "return" -->
+
+    <script>
+
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+            return 'Evento: ' + e.type + ' acontece que sua página acaba de ser descarregada.';
+        }
+        // Note que before unload pode não funcionar da maneira que esperamos, por isso, atribuímos um comportamento de console também para que você possa visualizá-lo também no console
+        
+
+    </script>
+
+</body>
+</html>

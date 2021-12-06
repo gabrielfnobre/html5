@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+
+<!-- Tag map (mapear)
+    
+    - Essa Tag é usada para criar um mapa de área clicável em uma imagem. Por exemplo, se você quiser clicar em uma parte da imagem e ser direcionado para outro lugar, se clicar em outra vai para outro lugar diferente, e assim por diante.
+    - O atributo name é obrigatório nessa tag, pois é ele que relaciona a tag map com a tag img por através do atributo usemap.
+    - Para definir as áreas clicáveis, usamos as tags area, que definirão o formato da área a ser clicada, as coordenadas e o link de referência.
+    - A tag map pode utilizar todos os atributos glogais.
+    - A tag map possuí um atributo específico, que é:
+
+        name : define um nome para relacionar com o atributo usemap da tag img. O valor que usamos nesse atributo é o nome do mapa que deverá ser o mesmo nome no atributo usemap da tag img.
+
+    - O CSS padrão dela é:
+            
+        map {    
+            display: inline;
+        }
+-->
+
+<body>
+    
+    <p>Clique no olho esquerdo e vá para Hcode.</p>
+    <p>Clique no olho direito e vá para a Hcode no Youtube</p>
+
+    <img src="032-source-logo256.png" alt="Logo da Hcode" usemap="#mapa_logo">
+    <!-- Para usar a tag map, primeiro vamos precisar de uma imagem, note que o atributo usemap contém o nome do atributo name tag map. -->
+
+    <map name="mapa_logo">
+        <area shape="circle" coords="104, 134, 15" href="https://hcode.com.br" alt="olho esquerdo">
+        <area shape="circle" coords="151, 131, 15" href="https://youtube.com/hcodebrasil" alt="olho direito">
+        <!-- Para saber que coordenadas colocar para atingir a área correta, use o paint -->
+    </map>
+
+</body>
+</html>

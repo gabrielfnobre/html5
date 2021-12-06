@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOADEDDATA</title>
+</head>
+
+<!-- Evento: loadeddata (carragamento de dados).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - loadeddata: é um evento que ocorre sempre que os dados de uma mídia são totalmente carregados na página.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" onloadeddata="debug(event)" ondurationchange="debug(event)" oncanplay="debug(event)" controls>
+    </video>
+    <!-- Perceba que vamos ter aqui 3 eventos para acontecer: durationchange, loadeddata e canplay. Perceba a ordem dos eventos: 
+        1º Vamos ter o durationchange acontecendo, pois os dados de duração de vídeo também são uma informação que é carregada no metadados; 
+        2º Vamos ter o loadeddata, que acontece quando dos os dados são carregados;
+        3º Por fim, vamos ter o canplay, quando já temos dados o suficiente para dar play no vídeo.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAG</title>
+    <style>
+        div {
+            height: 50vh;
+            width: 50vh;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<!-- Evento: drag (arrastar)
+
+    - drag: esse evento acontece sempre que arrastamos um elemento por através do mouse.
+    - Atenção! Esse evento só pode acontecer em elementos que estão com o atributo global "draggable" com o valor "true", do contrário, o draggable não pode acontecer.
+    - Note também que o drag só serve para arrastar um elemento, ele não serve para soltar o elemento dentro de uma área.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body>
+
+    <div ondrag="debug(event)" draggable="true"></div>
+    <!-- Note que, junto ao evento drag nós também declaramos o atributo draggable como true.-->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

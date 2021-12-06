@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH</title>
+</head>
+
+<!-- Evento: search (procurar).
+
+        - search: é um evento que ocorre sempre que um campo de busca é acionado.
+        - Esse evento ocorre diretamente sobre um input do tipo "search".
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+   <input type="search" onsearch="debug(event)">
+    <!-- Perceba que assim que o usuário aperta enter na sua busca, o search é acionado -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

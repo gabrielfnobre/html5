@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINK</title>
+    <link rel="stylesheet" href="019-style.css"> <!--linkamos o CSS-->
+    <link rel="shortcut icon" href="..\01-FUNDAMENTOS\02-Fundamentos_TAGS\source-logo.png" type="image/x-icon"> <!-- Linkamos a imagem no ícone, se criarmos um atalho com ele conseguimos ter o link como símbolo da aplicação.-->
+    <link rel="alternate" href="application/json" title="Versão JSON"> <!--Um link alternativo para o nossa página, com documentação diferente que o HTML, usando aplicação JSON, caso a HTML falhe.-->
+    <link rel="author" href="https//www.jw.org/pt-br"> <!--Esse link leva para uma outra página onde haverá informações do autor da página. Não precisaria ser especificamente uma página html, poderia ser um documento por exemplo.-->
+    <link rel="dns-prefetch" href="https://www.jw.org/pt/"> <!--O "dns-prefetch vai acelerar o acesso ao site"-->
+    <link rel="help" href="help.html"> <!--para levar o usuário para uma página de ajuda. (Atenção! essa página é fictícia)-->
+    <link rel="license" href="license.html"> <!--para levar o usuário a página de direitos autorais do site. (Atenção! essa página é fictícia)-->
+    <link rel="next" href="page2.html"> <!--para levar o usuário para a próxima página do site. (Atenção! essa página é fictícia)-->
+    <link rel="prev" href="page0.html"> <!--para levar o usuário para a página anterior do site. (Atenção! essa página é fictícia)-->
+    <link rel="prefetch" href="https://www.jw.org/pt/"> <!--para uma busca mais rápida que o dns-prefetch-->
+    <link rel="preconnect" href="https://www.jw.org/pt/"> <!--a página já fica conectada, porém o consumo de dados é maior-->
+    <link rel="prerender" href="https://www.jw.org/pt/biblioteca/videos/#pt/home"> <!--usado para abrir a página do link em segundo plano-->
+    <link rel="pingback" href="https://www.jw.org/en/"> <!--usado para ir para uma página de formulário, comentários e etc-->
+    <link rel="preload" href="https://www.jw.org/fr/"> <!--usado para ir para uma página de formulário, comentários e etc-->
+</head>
+<body>
+    <!-- OBJETIVO:
+            A tag "link" ou "ligar", é uma tag utilizada para fazer link da nossa página com um documento específico, como CSS por exemplo, ou para fazer a ligação da nossa página com outra página, ou um determinado elemento de outra página. Os links dentro das tags "link" não poderão ser acessados pelo usuário, para esse tipo de acesso é usado a tag "a" (anchor), mas esses links serão acessados pelos navegadores para otimização da página, ou para buscar documentos que irão complementar a nossa página.
+
+            Alguns atributos especiais utilizados na tag "link" são:
+            =>crossoringin:
+                O atributo "crossorigin" é utilizado para definir como um determinado link irá lidar com referências cruzadas de sites. Temos 2 valores que podemos usar nesse atributo, que são: "anonymous" e "use-credentials";
+                
+            =>href:
+                Ou "Hypertext Reference", é um atributo utilizado para mostrar o caminho ao qual o link vai levar, nesse atributo o valor que colocamos é o URL que levará até o documento, página, elemento e etc... ;
+
+            =>hreflang:
+                Ou "Hypertext Reference Language", é um atributo utilizado para mostrar qual é o idioma do elemento ao qual estamos linkando, esse atributo é importante para SEO, para que saibam identificar qual o idioma e se adaptar rapidamente a nova página. O valor que colocamos nesse atributo são os valores que identificam um idioma específico, como o "pt-br" por exemplo;
+
+            =>media:
+                O atributo "media" é utilizado quando desejamos que um determinado link seja acessado invés de outro quando ele for utilizado junto a um determinado dispositivo. Por exemplo, digamos que desejamos abrir um link numa impressora, usando o "media" fazemos com que o link para impressoras seja acessado em detrimento do link comum;
+            
+            =>rel:
+                Ou "relationship", é o atributo utilizado para expor o tipo de relacionamento entre a página atual e o documento ao qual o link irá linkar. Nesse atributo temos os seguintes valores: 
+
+                    "alternate" - Quando usado como type "stylesheet" define um valor alternativo de documento css, caso o principal não dê certo;
+
+                    "author" - Define um hiperlink para uma página que descreve o autor ou fornece uma maneira de contatar o autor;
+                    
+                    "dns-prefetch" - "pré-busca DNS" é um link onde o navegador faz uma busca antecipada ao endereço do link para estabelecer a ligação (handshaking), antes de permitir que o usuário tenha acesso ao link;
+                    
+                    "help" - indica que o link levará a um recurso de ajuda para o usuário, é útil para o SEO;
+                    
+                    "icon" - mais conhecido como "favicon", esse valor cria um link associado a um ícone de uma página na janela do navegador ou numa página como "favoritos". O ícone, vira um link que leva até a página;
+                    
+                    "license" - indica que o link levará a uma página ou documento onde haverá os termos de licensiamento da página, é útil para o SEO;
+
+                    "manifest" - indica que o link levará para um "Manifesto de Aplicativo da Web" (uma espécie de descrição detalhada de uma PWA), útil para SEO;
+
+                    "mod-ulepreload" - É uma espécie de link que inicia o carregamento antecipado de scripts de módulo;
+                    
+                    "next" - Indica um link que leva para o próximo recurso em relação a página atual, útil para SEO;
+                    
+                    "pingback" - Indica uma URL onde o usuário poderá fazer comentários sobre a página, útil para SEO;
+                    
+                    "preconnect" - "Conexão Antecipada" quando o navegador vê um link de rel "pre-connect" ele já estabelece uma ligação com o endereço do link, para, caso o usuário deseje acessá-lo, esse acesso possa ser executado quase que instantaneamente;
+                    
+                    "prefetch" - "Busca Antecipada", faz com que o navegador busque um recurso existente no endereço do link, e o deixe fácil de baixar ou acessar, para que o usuário o obtenha quase que instantaneamente. 
+                    
+                    "preload" - "Carregamento Antecipado", faz com que o navegador baixe um recurso que está no link, pois esse recurso será usado durante a navegação;
+                    
+                    "prerender" - "Renderização Antecipada", faz com que o navegador busque um site e o carregue antecipamente numa página separada, enquanto o usuário navega pela página atual.
+                    
+                    "prev" - indica que o link vai levar para um recurso que está na "página anterior" a qual o usuário está atualmente, útil para o SEO;
+                    
+                    "search" - indica que o link vai levar para uma página ou documento de busca sobre o assunto da página, útil para SEO;
+                    
+                    "stylesheet" - indica uma URL para ser usada como folha de estilo do documento atual;
+            
+            =>sizes:
+                Esse atributo é utilizado para mostrarmos o tamanho do ícone da nossa página, em largura e altura, é justamente esse valor que vamos colocar neste atributo;
+            
+            =>type:
+                Esse atributo define o tipo de arquivo que nós vamos utilizar, o mais comum é o "text/css", mas podemos usar vários arquivos diferentes nos nossos links, como: img, text, plain e etc;
+            
+        OBSERVAÇÕES: 
+            O ideal é que se utilize os links na área "head" da nossa página, por questões SEO.
+            Essa tag não tem tag de tag de fechamento.
+            O padrão de estilo css da tag "link" é:
+            link{
+                display: none;
+            }
+     -->
+     <!-- EXEMPLO:
+        Veja exemplos na área head, e como os links abaixo, por através da tag "a" são otimizados graças as tags "link" logo acima...
+    -->
+    <a href="https://www.jw.org/pt/">link mais rápido usando preconnect</a><br>
+    <a href="https://www.jw.org/pt/biblioteca/videos/#pt/home">link mais devagar, usando prerender para tentar abrir a página em segundo plano, mais ainda é um atributo experimental</a><br>
+    <a href="https://www.jw.org/en/">link para uso de ping</a><br>
+    <a href="https://www.jw.org/fr/">link para uso de preload</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICTURE</title>
+    
+</head>
+<body>
+    <!-- "picture" é usada para definir mais de uma opção de imagem para ser mostrada em vários dispositivos com telas diferentes, para isso essa tag trabalha em conjunto com as tags "img" (que define uma imagem padrão a ser mostrada) e a tag "source" para definir vários pontos de origem diferentes com imagens de resoluções diferentes de acordo com a resolução da tela do usuário.-->
+    <!-- Essa tag ajuda no processamentos das páginas, pois telas menores não precisam de resoluções tão altas -->
+    <!-- Tag "picture" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- Essa tag possuí atributos específicos, como:
+            => media: define o tipo de mídia ao qual os dados inseridos no source se aplica;
+            => src: define o URL do arquivo inserido no source;
+            => srcset: define URL's alternativos, caso um navegador não carregue determinado tipo de arquivo, outro assumirá o lugar dele;
+            => sizes: define tamanhos diferentes de imagens, como o picture por exemplo;
+            => type: define tipo de mídia que será reproduzido;
+    -->
+    <!--CSS padrão de "pictur": Nenhum;
+    -->
+
+    <picture>
+        <source srcset="027-img-logo.png" media="(min-width: 512px)">
+        <source srcset="032-source-logo256.png" media="(min-width: 256px)">
+        <source srcset="032-source-logo64.png" media="(min-width: 64px)">
+            <img src="027-img-logo.png" alt="Logo da Hcode">
+    </picture>
+    <!-- OBSERVAÇÕES:
+                Inspecione a página e jogue para o layout reponsive e fique alternando os tamanhos de tela, você perceberá que ao dar F5 ele usará uma imagem diferente de acordo com o dispositivo.-->
+
+
+</body>
+</html>

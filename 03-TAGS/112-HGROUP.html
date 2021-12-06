@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGROUP</title>
+    <style>
+        hgroup {
+            text-align: right;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-right: 16px;
+            border-right: 10px solid #f37520;
+        }
+        h1{
+            font-size: 1.93rem;
+            margin-bottom: 0;
+        }
+        h2{
+            font-size: 1.16rem;
+            margin-right: 0;
+        }
+        p {
+            text-align: justify;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: .95rem;
+        }
+        p.first::first-letter {
+            font-size: 3.2rem;
+            line-height: .7;
+            float: left;
+            padding-right: 8px;
+            padding-top: 4px;
+        }
+    </style>
+</head>
+
+<!-- Tag hgroup (Grupo "h")
+    
+    - Essa Tag é usada para agrupar as tags de h1 até h6.
+    - Essa tag cria uma vantagem muito grande quando desejamos mexer com todas as tags "h" de uma única vez.
+    - Essa tag pode utilizar todos os atributos glogais.
+    
+    - O CSS padrão dela é:
+            
+        nenhum
+
+-->
+
+<body>
+    
+    <hgroup>
+        <h1>Hcode Treinamentos</h1>
+        <h2>HTML 5</h2>
+        <h3>CSS</h3>
+        <h4>JavaScript</h4>
+        <h5>PHP</h5>
+        <h6>MySQL</h6>
+    </hgroup>
+    <!-- Perceba como o CSS está agindo de forma diferenciada sobre os "h" -->
+
+    <p class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolores voluptas repellat fugiat! Provident ex sint quis distinctio eveniet! Est, consequuntur. Impedit, alias maxime tempora quae odit eum harum quis.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dolores voluptas repellat fugiat! Provident ex sint quis distinctio eveniet! Est, consequuntur. Impedit, alias maxime tempora quae odit eum harum quis.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolor aut delectus laudantium mollitia expedita quo, in ullam cumque? Commodi corrupti minus culpa perferendis sint quidem quam et dicta sunt?</p>
+
+</body>
+</html>

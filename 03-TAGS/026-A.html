@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A</title>
+    
+</head>
+<body>
+    <!-- "a" (anchor - âncora) é usada para criar hyperlinks, ligando uma página HTML a outra página HTML-->
+    <!-- Tag "a" abre e fecha, ou seja, pode ter conteúdo, lembrando que, esse conteúdo, ao ser clickado vai levar o usuário até a página que ele deseja entrar, não importa qual seja o conteúdo, pode ser um foto, palavras, vídeo, o que for que der para colocar como conteúdo -->
+    <!-- Por padrão o conteúdo da tag "a" vem sublinhado -->
+    <!-- A tag "a" tem atributos específicos como:
+    => dowload: faz com que o link baixe o valor destino da tag "a", seja um texto, um vídeo, áudio; (OBS: o texto usado na tag "a" será usado como nome do arquivo baixado);
+    => href: Define a URL destino da tag "a";
+    => hreflang: Define qual é o idioma padrão do URL destino da tag "a", útil para SEO;
+    => media: Define qual é a mídia ou o dispositivo usado no link destino;
+    => ping: Ideal para relatórios, mostra quandos clicks foram feitos naquele link durante uma busca;
+    => referrerpolicy: Ou "política de referência", é usado para permitir que uma página referenciada descubra por através dos SEO's qual foi o site que a utilizou como link e também quando NÃO QUEREMOS que o site referenciado descubra a origem do link que levou até ela, nessa tag, podemos utilizar os valores:
+            no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin e unsafe-url;
+    => rel: para definir qual é o tipo de relacionamento que existe entre a nossa página e o link destino, para definir esses relacionamentos, podemos usar os seguintes atributos:
+            alternate, author, bookmark, external, help, license, next, nofollow, norerrer, noopener, prev, search e tag;
+    => target: Define onde você quer que o seu link abra, se numa nova janela, se num iframe específico e etc, podemos usar os valores:
+            _blank, _parent, _self, _top, ou o nome de um iframe específico;
+    => type: é o que chamamos de MIME type, que nada mais é que a definição da extensão do arquivo que vamos abrir;
+    -->
+    <!--CSS padrão de "a": 
+        //para o link ainda não clickado...
+        a:link{
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &
+
+        //para o link já visitado...
+        a:visited {
+            color: #551A8B;
+        }
+
+        &
+
+        //para o link no momento em que é clickado...
+        a:link:active {
+            color: red;
+        }
+    -->
+
+    <!-- Perceba como a mudança de protocolo no URL é importante... -->
+    <a href="https://www.hcode.com.br">Hcode</a><br>
+    <a href="mailto:contato@hcode.com.br">Hcode (perceba que se você tentar abrir esse ele vai te levar para algum aplicativo para ler arquivos de e-mail!)</a><br>
+    <a href="mailto:contato@hcode.com.br?subject=Curso de HTML5">Hcode (Nesse o link já abre o e-mail com o assunto já incluso)</a>
+
+</body>
+</html>

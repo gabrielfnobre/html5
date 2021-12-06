@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARAM</title>
+</head>
+<body>
+    <!-- "param" passa parâmetros para as tags "object" e "embed"-->
+    <!--CSS padrão de "param":
+        param{
+            display: none;
+        }
+    -->
+    <object data="../01-FUNDAMENTOS/02-Fundamentos_TAGS/object-object.pdf#page=3" type="application/pdf" height="800px" width="600px"> <!--Perceba que no URL incluímos o "#nomeDeParam=valorDeParam" para fazer o arquivo abrir diretamente na página 3-->
+    <param name="page" value="3"> <!--Por padrão usamos um name e um value como atributos de param...
+                                        name (para dar um nome a um parametro, é importante para identificar o parâmetro que vamos usar no arquivo URL - veja URL acima)
+                                        value (para estipular o valor que o parâmetro vai receber)
+                                    OBSERVAÇÕES: O parâmetro acima faz com que o arquivo PDF abra na página 3-->
+    </object>
+</body>
+</html>

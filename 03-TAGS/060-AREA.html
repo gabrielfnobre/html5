@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA</title>
+</head>
+
+<!-- Tag area (área)
+    
+    - Essa Tag é usada para definir áreas clicáveis num mapa de imagem.
+    - Essa tag sempre deve ser filha de uma tag map, não é indicável utilizá-la em outras tags. Isso poderia bagunçar a semantica do seu código.
+    - A tag area pode utilizar todos os atributos glogais.
+    - Essa tag também possuí alguns atributos específicos, como:
+
+        alt: Define um texto alternativo para a imagem, seu valor é um texto á sua escolha;
+
+        coords: Define as coordenadas da área clicável, por através dela conseguimos posicionar a área clicável e definir um  
+                tamanho para ela. Para essas especificações usamo o atributo "shape", para cada tipo de shape ela vai funcionar de forma diferente, por exemplo:
+                        shape="circle" x1, y1, raio do shape (a área será em formato de círculo)
+                        shape="rect" x1, y1, x2, y2 (onde x2 e y2 se refere a área do shape, que será um retângulo)
+                        shape="poly" x1, y1, x2, y2.. xn, yn (onde o poly será um polígono, e os pontos serão serão as pontas)
+                * para detalhes especifícos sobre os shapes veja o material em power point.
+        
+        download: Usado para forçar o dowload do destino do link, como valor podemos usar um texto que vai acabar virando o   
+                título do download; 
+        
+        href: Define qual o endereço do link de destino. Como valor colocamos o URL do destino;
+        
+        hreflang: Define qual é o idioma do link destino. Como valor colocamos o código de idioma do destino.
+        
+        media: Define qual é a mídia ou dispositivo do link destino. Como valor colocamos a Media Query.
+        
+        rel: Define qual é o relacionamento do documento atual com o destino, para isso podemos usar os valores:
+                alternate
+                author
+                bookmark
+                external
+                help
+                license
+                next
+                nofollow
+                noreferrer
+                noopener
+                prev
+                search
+                tag
+        
+        shape: Define uma forma para a área do shape, essa forma pode ser: default, rect, circle ou poly
+        
+        target: Define onde o link poderá ser aberto, para isso usamos os valores: '_blank', '_parent', '_self', '_top' ou o 
+                nome de algum frame
+        
+        type: Define o tipo de mídia do link destino, o valor é o tipo de mídia (MIME type)
+
+    - O CSS padrão dela é:
+            
+        area {    
+            display: none;
+        }
+-->
+
+<body>
+    
+    <p>Clique no olho esquerdo e vá para Hcode.</p>
+    <p>Clique no olho direito e vá para a Hcode no Youtube</p>
+
+    <img src="032-source-logo256.png" alt="Logo da Hcode" usemap="#mapa_logo">
+
+    <map name="mapa_logo">
+        <area shape="circle" coords="104, 134, 15" href="https://hcode.com.br" alt="olho esquerdo">
+        <area shape="circle" coords="151, 131, 15" href="https://youtube.com/hcodebrasil" alt="olho direito">
+        <area shape="rect" coords="0, 0, 20, 20" href="https://github.com/hcodebr" alt="GitHub da Hcode">
+    </map>
+
+</body>
+</html>

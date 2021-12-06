@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INS</title>
+</head>
+
+<!-- Tag ins (insert - inserir)
+    
+        - Essa Tag é usada para definir um texto que foi inserido, editado ou alterado na nossa página.
+        - Essa tag pode utilizar todos os atributos glogais.
+        - Mas ela possuí atributos específicos, que são :
+
+            cite: Define a fonte do motivo pelo qual o texto foi inserido ou alterado, e recebe como valor o URL da fonte de alteração.
+
+            datetime: Define quando o texto foi alterado e recebe como valor a data e hora de alteração, no formato 
+                        YYYY-MM-DDThh:mm:ssTZD.
+
+        - O CSS padrão dela é:
+            
+            insert {
+                text-decoration: underline;  //risco na base no texto.
+            }
+
+        OBS: A tag ins pode confundir um leitor, pois, uma citação de inserção é muito parecida com um link.
+-->
+
+<body>
+
+    <p>Lorem ipsum dolor <ins cite="https://hcode.com.br" datetime="2019-11-12 01:24">amet consectetur</ins> adipisicing elit. Asperiores nemo repudiandae in labore laudantium minus adipisci illo recusandae tempore, nam repellendus deserunt fuga ad blanditiis, natus corrupti quae animi autem.</p>
+    
+</body>
+</html>

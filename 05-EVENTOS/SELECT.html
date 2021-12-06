@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT</title>
+</head>
+
+<!-- Evento: select (selecionar).
+
+        - select: é um evento que ocorre sempre que selecionamos um texto dentro de uma área digitável, como um input, textarea e coisas do tipo.
+        - Esse evento só acontece quando fazemos uma seleção do texto que acabamos de escrever.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+   <input type="text" onselect="debug(event)">
+   <!-- Perceba que, assim que selecionamos o texto escrito dentro do input, o evento select é acionado -->
+
+   <textarea onselect="debug(event)" cols="30" rows="10"></textarea>
+   <!-- Perceba como o mesmo acontece com a tag textarea -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

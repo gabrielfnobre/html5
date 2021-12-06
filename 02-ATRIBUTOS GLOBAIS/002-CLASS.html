@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <style>
+        .botao{
+            border: none;
+            background-color: bisque; /*Mude aqui para "red"*/
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- OBJETIVO:
+    
+        O class é um elemento global que tem o objetivo de identificar elementos na página que receberão o mesmo tipo de formatação ou comportamento por através de css. Todos os elementos que estiverem usando o mesmo nomeclass irão receber os mesmos comandos atribuitos ao seu nomeClass.
+        OBSERVAÇÃO: quando queremos referenciar class em css e JavaScript utilizamos o sinal ".".
+    -->
+
+    <!-- EXEMPLO: 
+    
+        No exemplo abaixo criamos um botão e um link, ambos utilizando o mesmo nomeClass: "botao". Por isso, não importa se você está olhando para o link ou para o botão eles parecem identicos apesar de serem elementos diferentes. Para ver como isso acontece, mude a cor de background no style acima para "red" e perceba que ambos elementos vão mudar...
+    -->
+
+    <button type="button" class="botao">Botão</button>
+    <a href="a" class="botao">Botão</a>
+    <!-- OBSERVAÇÃO: note que todo o estilo css está na tag style em head, e para referenciar usamos o "." seguido pelo nome dado a class "botao". -->
+
+</body>
+</html>

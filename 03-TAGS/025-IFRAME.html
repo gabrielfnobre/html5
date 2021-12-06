@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFRAME</title>
+    
+</head>
+<body>
+    <!-- "iframe" é usado para inserir um arquivo html dentro de um quadro dentro da sua própria página, como se fosse uma div, um embed ou object, mas a diferença é que o "iframe" insere arquivos html, ele é criado para isso!-->
+    <!-- Tag "iframe" abre e fecha, ou seja, pode ter conteúdo -->
+    <!-- Você pode passar somente o link de um arquivo html para a sua página, ou, de fato, você pode digitar o arquivo html dentro do seu "iframe" -->
+    <!-- Se o conteúdo do seu iframe for maior do que o espaço criado, ele vai criar scrolls -->
+    <!-- Atributos padrão do "iframe":
+        => height: Define altura do iframe;
+        => name: Define um nome "PARA O IFRAME", não para a URL, o nome de um iframe pode ser usado para "targeá-lo";
+        => sandbox: Ativa conteúdos restritos por padrão do navegador, como popups, forms, scripts, alguns valores usados são:
+                    allow-forms, allow-pointer-lock, allow-popups, allow-same-origin, allow-scripts e allow-top-navigation;
+        => src: Define a fonte URL do arquivo html a ser embutido dentro do iframe;
+        => srcdoc: Define a estrurura padrão do arquivo que será embutido, que no caso é HTML;
+        => width: Define largura do iframe; -->
+    <!--CSS padrão de "iframe": 
+        iframe:focus{
+            outline: none;
+        }
+
+        &
+
+        iframe[seamless]{
+            display: block;
+        }
+    -->
+
+    <h1>Tag Iframe</h1>
+    
+    <iframe src="021-EMBED.html" width="500" height="300"></iframe> 
+    <!--Se o visual colocar o atributo "frameborder" por padrão, lembre-se de que esse atributo não funciona mais no HTML5-->
+    <!-- Veja que usamos um arquivo criado anteiormente, colocando um "embed" dentro de um "iframe" -->
+</body>
+</html>

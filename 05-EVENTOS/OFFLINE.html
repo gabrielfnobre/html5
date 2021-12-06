@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFLINE</title>
+</head>
+
+<!-- Evento: offline (fora da rede)
+
+    - offline: vai causar algum comportamento quando a página (e somente a janela da página) for desconectada a internet - mesmo que o computador tenha internet e mas a janela não tenha, esse evento não ocorre.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body onoffline="debug(event)">
+
+    <p>Desligue a internet da página, e veja a mensagem sendo mostrada</p>
+
+    <script>
+        function debug(e) {
+            alert('Evento: ' + e.type + ' foi disparado!');
+        }
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

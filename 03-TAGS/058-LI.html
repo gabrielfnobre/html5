@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LI</title>
+</head>
+
+<!-- Tag li (list item - item da lista)
+    
+        - Essa Tag é usada sempre dentro de uma tag ul ou de uma tag ol.
+        - A função principal dessa tag é definir um item de uma lista.
+        - A tag li pode utilizar todos os atributos glogais.
+        - Essa tag também têm um atributo específico, que é o:
+
+            value: Define um valor para o item de uma lista, quando utilizado em listas ordenadas, o valor escolhido no  
+                    value será como índice para os demais valores abaixo dele. Esse atributo não tem significado nenhum em listas desordenadas. Podemos colocar como valores números e textos.
+
+        - O CSS padrão dela é:
+            
+            li {    
+                display: list-item;
+            }
+
+        - BONUS: criação rápida de li's a IDE visual studio code permite que criemos vários li's de uma única vez usando o 
+                truque "li*2" por exemplo, usando o nome da tag seguido pelo operador de multiplicação e o número. Isso não serve apenas para o li, mas todas as tags. Podemos ir ainda mais longe, usando o "{$}" depois do comando anterior, dessa forma: li*2{$}, isso vai fazer não só que criemos 2 li de uma vez, como também vamor poder 
+                colocar conteúdos dentro dele, numéricamente em série, dessa forma:
+                li*2{$} = 
+                            <li>1</li>
+                            <li>2</li>
+-->
+
+<body>
+
+    <ul>
+        <li>1</li>
+        <li value="50">2</li> <!--Perceba que numa lista desordenada o value não tem significado nenhum.-->
+        <li>3</li>
+    </ul>
+
+    <ol>
+        <li>1</li>
+        <li value="50">2</li> <!--Perceba que o value vai causar mudança no valor das listas á partir do item que ele for declarado, se quiséssemos uma mudança desde o princípio de uma lista, seria mais indicado usarmos o start na tag ol-->
+        <li>3</li>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+        header, footer {
+            height: 10vh;
+            background-color: #CCC;
+        }
+        section {
+            display: flex;
+            flex-direction: row;
+        }
+        main {
+            height: 80vh;
+            background-color: #999;
+            flex: 1;
+        }
+        aside{
+            height: 80hv;
+            background-color: gold;
+            width: 20vh;
+        }
+        ul{
+            margin: 0;
+        }
+    </style>
+    <title>NAV</title>
+</head>
+<body>
+    <!-- Tag nav (de navegação)
+    
+        - Essa Tag serve como um "wrap", ou seja, ela agrupa elementos onde você vai ter links de navegação, geralmente você vai usar listas para isso como ul ou ol, as tag li e as tags "a" de dentro. Mas não necessariamente precisa ser dessa forma, você pode ter as tags "a" somente, e formatá-las da maneira que você desejar utilizando CSS.
+        - Importante semânticamente para agrupar links de navegação.
+        - Na tag "nav" não há necessidade de você utilizar todos os links de navegação de uma página dentro da nav. Por exemplo, se você tiver uma tag nav na parte de cima da sua página, pode ser que você tenha alguns links do seu site, já no footer pode ser que você tenha outra nav, com outros links ou com mais links do seu site. Na parte do aside pode ser que você tenha outros links, ou seja, você pode ter várias tags nav para colocar links de formas diverenciadas.
+        - A tag nav pode utilizar todos os atributos glogais.
+        - O CSS padrão dela é:
+            
+            nav {    
+                display: block;
+            }
+    -->
+
+    <header>
+        <nav> <!--Perceba que onde há a necessidade de agrupar links, vamos ter uma tag nav lá-->
+            <a href="#">Cursos</a>
+            <a href="#">Contatos</a>
+        </nav>
+    </header>
+
+    <section>
+
+        <aside>
+            <nav> <!--Num caso acima a tag nav não usa as tags ul e li, mas aqui onde há a necessidade de fazer uma lista-->
+                <ul> <!--Nós já incluímos essas tags...-->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Loja Virtual</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorem dolore aspernatur aut tempora ipsa maxime, quaerat, voluptatum blanditiis officia, quidem eum. Molestiae iusto aliquam tempora inventore voluptatum corporis architecto.</p>
+        </aside>
+
+        <main></main> <!-- Quando um main é colocado depois de um aside "por convenção" entende-se que o aside deverá ficar do lado esquerdo-->
+
+    </section>
+    
+
+    <footer>
+        <nav>
+            <a href="#">Politica de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

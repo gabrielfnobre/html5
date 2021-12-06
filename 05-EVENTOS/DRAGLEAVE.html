@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAGLEAVE</title>
+    <style>
+        #drag {
+            height: 15vh;
+            width: 15vh;
+            background-color: blueviolet;
+            display: inline-block;
+        }
+        #target {
+            height: 30vh;
+            width: 30vh;
+            border: darkblue solid;
+            display: inline-block;
+            margin-left: 15vh;
+        }
+    </style>
+</head>
+
+<!-- Evento: dragleave (arrasta entra e saí)
+
+    - dragleave: esse evento acontece sempre que entramos com um elemento arrastável dentro de um elemento onde o dragleave esteja declarado e saí, toda vez que saí, o dragleave acontece.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body>
+
+    <div id="drag" ondrag="debug(event)" draggable="true"></div>
+    <!-- Perceba que aqui nós temos uma div arrastável.-->
+
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)"></div>
+    <!-- Perceba agora que essa div que delimita a área, não só traz um evento para quanto a div arrastável entra na área, como também traz um evento para quando uma div saí de dentro da área. -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

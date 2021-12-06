@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDO</title>
+</head>
+
+<!-- Tag bdo
+    
+    - Essa Tag é usada para definir a direção de um texto atual na nossa página, quando nós sabemos qual é a direção do texto que nós queremos substituir em relação a direção padrão.
+    - Nessa tag o atributo dir é obrigatório, pois ele é o responsável por definir a direção que o texto deve tomar.
+    - A tag bdo pode utilizar todos os atributos glogais.
+    - Mas essa tag também possuí um atributo específico, que é o atributo "dir":
+
+        dir: Define a direção do texto dentro do elemento pelo qual é chamado. Como valores podemos usar: ltr(esquerda) ou rtl (direita)
+    
+    - O CSS padrão dela é:
+            
+        bdo {
+            unicode-bidi: bidi-override;
+        }
+
+    OBS: o atributo dir também pode ser usado sobre a tag html para mudar a direção do texto da nossa página, mas o bdo é usado
+        somente quando queremos a mudança de um único texto exclusivo dentro da nossa página.
+-->
+
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam facere unde sed eum! Sint eum iure pariatur, ex, ea amet aut recusandae earum, temporibus distinctio architecto quaerat. Quia, fugit illum.</p>
+
+    <bdo dir="rtl">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam facere unde sed eum! Sint eum iure pariatur, ex, ea amet aut recusandae earum, temporibus distinctio architecto quaerat. Quia, fugit illum.</p>
+    </bdo>
+    <!-- Perceba que o elemento que queremos mudar fica como conteúdo das tags bdo -->
+
+</body>
+</html>

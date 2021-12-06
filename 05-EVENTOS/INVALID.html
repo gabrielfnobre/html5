@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVALID</title>
+</head>
+
+<!-- Evento: invalid (inválido).
+
+        - invalid: é um evento que ocorre sempre que acontece algo inválido.
+        - Isso geralmente é algo que acontece em formulários, como por exemplo, quando uma pessoa quer enviar um valor em um campo de uma forma errada.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <form>
+        <input type="email" oninvalid="debug(event)" required>
+        <!-- Perceba que colocamos o nosso evento sobre uma tag input de email, que é obrigatório ser enviado -->
+        <button type="submit">Enviar</button>
+        <!-- E um botão para enviar está sendo usado só para provocar o evento invalid -->
+</form>
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

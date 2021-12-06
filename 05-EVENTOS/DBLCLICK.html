@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBLCLICK</title>
+</head>
+
+<!-- Evento: dblclick (double click - click duplo)
+
+    - dblclick: vai causar algum comportamento quando o objeto em que o evento estiver acontecendo for clicado duas vezes.
+    - Esse evento funciona em qualquer elemento, desde que o dblclick seja posicionado encima do elemento, e o elemento tenha um tamanho grande o suficiente para que ele seja clicado.
+    - Atenção! Elementos que estão por baixo de outros não poderão ser clicados diretamente.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body ondblclick="debug(event)" style="height: 100vh;">
+<!-- Perceba que tivemos que usar 100 atribuindo o body a toda a viewport para que o dblclick funcionasse em qualquer lugar da tela. -->
+
+    <button type="button" ondblclick="debug(event)">Click aqui!</button>
+    <!-- Também colocamos o dbclick diretamente sobre um botão -->
+
+    <script>
+        function debug(e) {
+            alert('Evento: ' + e.type + ' foi disparado!');
+        }
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+</head>
+<!-- Aqui nós adicionamos o formulário para fazer o login da página html -->
+<body>
+
+    <header>
+        <h1><a href="https://www.hcode.com.br"  target="_blank">Hcode</a></h1>
+        <nav></nav>
+    </header>
+
+    <section>
+        <div>
+            <a href="https://www.hcode.com.br" target="_blank"><img src="assets/images/hcode.png" alt="Logo da Hcode"></a>  
+        </div>
+
+        <form action="/login" method="POST"> <!--Começamos com a nossa tag form, todo formulário deverá estar salvaguardado por uma tag form-->
+
+            <div>
+                <input type="email" placeholder="Digite o seu Email" required>
+            </div>
+
+            <div>
+                <input type="password" placeholder="Digite a Senha" required>
+            </div>
+
+            <div>
+                <button>Enviar</button>
+            </div>
+            <!-- Perceba que em todos os nossos campos de input nós já criamos uma div, por que? Para depois ficar mais fácil de trabalhar com CSS encima delas. -->
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>Hcode Treinamentos</p>
+    </footer>
+    
+</body>
+</html>

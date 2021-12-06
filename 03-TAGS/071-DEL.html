@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEL</title>
+</head>
+
+<!-- Tag del (dados)
+    
+        - Essa Tag é usada para definir um texto que foi excluído da nossa página.
+        - A tag del pode utilizar todos os atributos glogais.
+        - Mas ela possuí atributos específicos, que são :
+
+            cite: Define a fonte do motivo pelo qual o texto foi excluído, e recebe como valor o URL da fonte de exclusão.
+
+            datetime: Define quando o texto foi excluído e recebe como valor a data e hora de exclusão, no formato 
+                        YYYY-MM-DDThh:mm:ssTZD.
+
+        - O CSS padrão dela é:
+            
+            del {
+                text-decoration: line-through;  //risco no meio da palavra
+            }
+-->
+
+<body>
+
+    <p>Lorem ipsum <del cite="https://hcode.com.br" datetime="2020-11-12 01:18">dolor</del> sit amet consectetur</p>
+    
+</body>
+</html>

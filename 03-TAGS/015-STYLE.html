@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLE</title>
+    <style> /*usando a tag style aqui definimos a cor "vermelha" para a área body da nossa página.*/
+        body {
+            background-color: red;
+        }
+    </style> <!--É necessário criar outra tag "style" para que assuma um comportamento único em outro tipo de mídia-->
+    
+    <style media="print"> /*Porém, quando pedimos para imprimir, o "style media" faz com que nossa página mude a cor de fundo da área "body". OBSERVAÇÃO: na hora de imprimir permita que os gráficos de segundo plano apareçam! Caso contrário você não poderá ver a cor de background*/
+        body{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- OBJETIVO:
+        A tag "style" ou "estilo", é a tag que define o estilo CSS de uma página, ela sempre é atribuída da área "head" de uma página. A tag "style" pode receber os seguintes atributos:
+            => media:
+                O media se refere a um estilo de dispositivo ao qual a tag style vai adaptar a nossa página para assumir um determinado comportamento, ou estilo, somente quando estiver em contato com o dispositivo definido em <style media="dispositivo">.
+
+            => type:
+                Definine o tipo de arquivo aceito na página, se é arquivo "text" ou "css". O padrão é usar o "css", dessa forma <style type="css">. 
+        OBSERVAÇÕES: Por padrão, o estilo CSS do "style" é:
+            style {
+                display: none;
+            }
+     -->
+     <!-- EXEMPLO:
+        Veja a tag style dentro da área "head" logo acima...
+    -->
+</body>
+</html>

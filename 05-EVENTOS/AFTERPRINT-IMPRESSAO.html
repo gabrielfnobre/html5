@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressao</title>
+</head>
+
+<!-- Evento: executa uma função assim que o usuário chama para imprimir (no caso de beforeprint) ou termina uma impressão (no 
+            caso de afterprint).
+
+        - beforeprint: chama uma execução ou função ANTES de uma impressão acontecer;
+
+        - afterprint: chama uma execução ou função DEPOIS de uma impressão acontecer;
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onbeforeprint="debug('Deseja mesmo imprimir?')" onafterprint="debug('Impressão foi terminada ou cancelada')">
+    <!-- Como beforeprint e afterprint são afetados sobre uma ação do usuário sobre toda a tela, ou seja, a body, eles são aplicados diretamente sobre a tag body, e são ativados assim que o usuário chama para imprimir, ou termina/cancela uma impressão -->
+    
+    <script>
+        function debug(e) {
+            alert('Evento: ' + e);
+        }
+    </script>
+    <!-- Podemos fazer qualquer tipo de acontecimento ocorrer antes ou depois de uma impressão, no caso aqui, escolhemos um alert para avisar quando estamos chamando para imprimir e quanto uma impressão foi terminada. -->
+
+</body>
+</html>

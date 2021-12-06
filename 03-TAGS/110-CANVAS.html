@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CANVAS</title>
+<style>
+    body{
+        background-color: black;
+    }
+</style>
+</head>
+
+<!-- Tag canvas (tela de pintura)
+    
+        - Essa Tag é usada para definir um quadro de desenho gráfico dentro da nossa página, que podem ser em 2D ou 3D.
+        - Essa tag somente coloca um espaço para que o desenho possa acontecer, toda a programação por traz do desenho deve ser feita em JavaScript. 
+        - Essa tag pode utilizar todos os atributos glogais.
+        - Mas ela também usa atributos específicos, como:
+
+            height: Define uma altura para o quadro. Valor: Número.
+
+            width: Define uma largura para o quadro. Valor: Número.
+        
+        - O CSS padrão dela é:
+            
+            canvas {
+                height: 150px;
+                width: 300px;
+            }
+
+-->
+
+<body>
+
+    <canvas id="quadro"></canvas>
+
+    <script>
+
+        const quadro = document.querySelector('#quadro');
+        const contexto = quadro.getContext('2d');
+
+        contexto.fillStyle = "#FF0000";
+        contexto.fillReact(0, 0, 100, 100);
+
+    </script>
+    <!-- Usamos um script para criar um quadro vermelho dentro do nosso canvas -->
+
+</body>
+</html>

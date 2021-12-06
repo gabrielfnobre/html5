@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSCRIPT</title>
+<noscript>
+    <style>
+        body{
+            background: red;
+            color: white;
+        }
+        .nojavascript {
+            color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</noscript>
+</head>
+<body>
+    <!-- OBJETIVO:
+            A tag "noscript" é usada para exibir um documento html ou css caso o javascript de um navegador não esteja funcionando, ou esteja desabilitado. Ele é muito útil para ser usado como suporte para que o usuário saiba que o javascript do navegador está desabilitado, ou para exibir um documento de emergência caso o nosso javascript não esteja funcionando.
+        OBSERVAÇÕES:
+            Por padrão o "noscript" não possuí CSS padrão;
+            Ele pode ser usado tanto na área "head", para exibir um estilo CSS diferente caso o navegador esteja com o javascript desabilitado, quanto pode ser utilizado na área "body" para exibir um documento html diferente caso o javascript não funcione.
+        EXEMPLO:
+            Podemos ver 2 exemplos de uso do "noscript" tanto na área "head" quanto na área "body" nesta página. Desabilite o javascritp no seu navegador e veja como essas tags funcionam bem...
+    -->
+
+    <h1>Página funcionando com JavaScript</h1>
+    <script>
+        alert('Oi, o JavaScript está funcionando!');
+    </script>
+    <noscript class=nojavascript>
+        <p>Seu JavaScript está desabilitado!</p>
+    </noscript> <!-- Esse "noscript" irá mudar a escrita do seu código html, adicionando o aviso de que o javascript está desabilitado. -->
+
+</body>
+</html>

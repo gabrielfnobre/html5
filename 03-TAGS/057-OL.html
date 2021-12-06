@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OL</title>
+</head>
+
+<!-- Tag ol (ordened list - lista ordenada)
+    
+        - Essa Tag é usada para definir listas odenadas, com numerações, letras e outras.
+        - A tag ol pode utilizar todos os atributos glogais.
+        - A tag ol também possuí atributos personalizados, como:
+            
+            reverserd: define que uma lista deve acontecer em ordem decrescente, ela recebe como valor: reversed;
+
+            start: define um valor inicial para a lista, recebe como valor um número para iniciar;
+            
+            type: define qual é o tipo de marcação que a lista deve receber, por exemplo, qual é o tipo de números, letras, 
+                    se deverão ser em maíusculo, ou minúsculo. Ela recebe valores como: 1, A, a, I, II, i ; 
+
+        - O CSS padrão dela é:
+            
+            ol {    
+                display: block;
+                list-style-type: decimal;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 40px;
+            }
+-->
+
+<body>
+
+    <ol> <!--Perceba que por padrão ela vêm ordenada numéricamente-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+    <ol reversed> <!--Usando reversed conseguimos transformar a ordem numérica para decrescente-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+    <ol type='A'> <!--Colocando somente a letra 'A' em maíusculo sobre o atributo type nossa lista será ordenada por letras maíusculas-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+    <ol type='a'> <!--Colocando somente a letra 'a' em minúsculo sobre o atributo type nossa lista será ordenada por letras minúsculas-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+    <ol type='I'> <!--Colocando somente a letra 'I' em maíusculo sobre o atributo type nossa lista será ordenada por algarismos romanos em letras maíusculas-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+    <ol type='i'> <!--Colocando somente a letra 'i' em minúsculo sobre o atributo type nossa lista será ordenada por algarismos romanos em letras minúsculas-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+    <ol type='1' start="12"> <!--Colocando um type seja lá qual for e definindo um valor no start que exista dentro daquele type, ela vai começar á partir dele.-->
+        <li>HTML 5</li>
+        <li>CSS 3</li>
+        <li>JavaScript</li>
+        <li>PHP 7</li>
+        <li>MySQL 8</li>
+    </ol>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORM</title>
+</head>
+
+<!-- Tag form (formulário)
+    
+        - Essa Tag é usada para definir um formulário.
+        - Ela também agrupa todos os campos que dão entrada ao formulário.
+        - Essa tag pode utilizar todos os atributos glogais.
+        - Mas essa tag também tem vários atributos específicos, como:
+
+            accept-charset: Define o encode usado para enviar o formulário, recebe como valores os charset;
+
+            action: Define para qual URL o formulário será enviado, recebe como valor a URL;
+
+            autocomplete: Define se os campos terão a função de autocompletar habilitada, recebe como valores "on" e "off";
+
+            enctype: Define qual codificação de formulário será usada. Dentre elas podemos ter os valores:
+                        application/x-www-form-urlencoded
+                        multipart/form-data
+                        text/plain
+
+            method: Define qual será o método de envio do formulário, para isso recebe os valores: get e post;
+
+            name: Define qual o nome do formulário, recebe como valor um texto com o nome do formulário;
+
+            novalidate: Define se a validação de um formulário deve ser desligada antes de enviar um formulário, recebe como 
+                        valor "novalidate";
+
+            target: Define qual é o alvo ao enviar um formulário, recebe como valor:
+                        _blank
+                        _self
+                        _parent
+                        _top
+
+        - O CSS padrão dela é:
+            
+            form {
+                display: block;
+                margin-top: 0em;
+            }
+
+-->
+
+<body>
+
+    <form action="/send" method="post" target="_blank" enctype="multipart/form-data">
+
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <input type="submit" name="Enviar">
+
+    </form>
+    <!-- Perceba como o formulário amarra todos os elementos de um formulário dentro de si mesmo -->
+
+</body>
+</html>

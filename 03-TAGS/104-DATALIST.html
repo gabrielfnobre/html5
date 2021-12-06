@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATALIST</title>
+</head>
+
+<!-- Tag datalist (lista de dados)
+    
+        - Essa Tag é usada para definir uma lista suspensa de opções para um input, dando opções para um usuário possa escolher entre as opções para preencher um campo.
+        - Para que isso aconteça precisamos criar uma vinculação entre a lista suspensa e o input por através de um ID, onde o input recebe o nome do id por através do atributo "list", e o datalist recebe o seu próprio nome por através do atributos global "id".
+        - Essa tag pode utilizar todos os atributos glogais.
+        
+        - O CSS padrão dela é:
+            
+            datalist {
+                display: none;
+            }
+
+-->
+
+<body>
+
+    <input type="text" list="opcoes">
+
+    <datalist id="opcoes">
+        <option>PHP</option>
+        <option>JavaScript</option>
+        <option>Laravel</option>
+        <option>Boostrap</option>
+        <option>MySQL</option>
+    </datalist>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>TH</title>
+
+</head>
+<body>
+    <!-- "th" (Table Headers - Cabeçalhos da Tabela) é usada para criar células de cabeçalhos na nossa tabela, é nessas células que vão os atributos das nossas tabelas, e elas são reconhecidas semânticamente.-->
+    <!-- Tag "th" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- As "th" precisam estar dentro das tags "thead" comportadas pelas tags "tr" - criadoras de linhas - afinal o objetivo principal dela é designar células dentro do cabeçalho. -->
+    <!-- A tag "th" possuí atributos específicos somente dela: 
+            => abbr: define uma abreviação - textual - do conteúdo da célula caso o texto dentro da célula não caíba dentro dela;
+            => colspan: define um número de colunas horizontais que a tag "th" deverá ocupar;
+            => headers: define uma ou mais células de cabeçalho relacionadas a ela por através de ID;
+            => rowspan: define um número de linhas verticais que a tag "th" deverá ocupar;
+            => scope: define qual é o escopo da célula, se é de linha, coluna, de grupo de linha ou de grupo de coluna, para isso ela usa os valores: col, colgroup, row e rowgroup;
+            => sorted: define uma direção de ordenação dos elementos dentro do escopo da nossa célula, por exemplo, se a ordem deve ser numérica, crescente ou decrescente, para isso podemos usar os valores: reversed, number, reversed number ou number reversed (ATENÇÃO!! - atualmente ainda não é suportado pela maioria dos navegadores);
+    -->
+    <!--CSS padrão de "th":
+        th {
+            display: table-cell;
+            vertical-align: inherit;
+            font-weight: bold;
+            text-align: center;
+        }
+    -->
+
+    <table>
+        <thead>
+            <tr>
+                <th sorted="reversed">Header 1</th> <!--Ainda não estão funcionando em todos os navegadores-->
+                <th abbr="Jan">Janeiro</th> <!--Ainda não estão funcionando em todos os navegadores-->
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">a1</td>
+                <td>c1</td>
+            </tr>
+            <tr>
+                <td>a2</td>
+                <td rowspan="2">b2</td>
+                <td>c2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>c3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rodapé1</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+</html>

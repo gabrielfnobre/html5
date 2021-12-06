@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASTE</title>
+</head>
+
+<!-- Evento: paste (colar)
+
+    - paste: esse evento acontece sempre que tentamos colar um elemento ao qual o evento paste está declarado.
+    - Esse evento acontece de pai para filho também, se o atribuirmos sobre um elemento pai, os filhos vão copíar o comportamento dele.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body onpaste="debug(event)">
+    <!-- Perceba que declaramos o evento paste como pai, isso significa que em qualquer elemento dentro do body onde for possível colar, vai fazer com que o evento paste aconteça-->
+
+    <input type="text">
+    <!-- O input é um elemento onde o paste é possível, perceba que não declaramos o paste sobre o input, mas sobre o elemento pai, o "body" -->
+
+    <p oncopy="debug(event)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet dignissimos eius accusantium vero repellat? Aperiam quibusdam cum odit similique nemo natus eligendi, minima officia quo quae impedit, consectetur dignissimos! Modi?</p>
+    <!-- Temos aqui somente um paragrafo para usá-lo para copiar, perceba que, quando copiamos o evento copy acontece... -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

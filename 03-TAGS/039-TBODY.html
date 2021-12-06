@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>TBODY</title>
+
+</head>
+<body>
+    <!-- "tbody" (Table Body - Corpo da Tabela) é usada para criar um corpo na nossa tabela, essa tag que vai comportar as tags responsáveis pelo conteúdo da nossa tabela.-->
+    <!-- Tag "tbody" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- As "tbody" trabalham em conjunto com as tags "thead" e "tfoot", responsáveis por comportar o cabeçalho da nossa tabela e o rodapé dela - por isso a tag tbody deve vir sempre entre elas, depois da tag "thead" e antes da tag "tfoot". São elas que dão peso semântico a nossa tabela para as buscas de SEO e impressões, por exemplo até adicionando rolagens a nossa tabela respeitando o peso semântico dela. -->
+    <!-- A tag "tbody" é filha da da tag "table", assim como as tags "tbody" e "tfoot" -->
+    <!-- É nessa tag que comportamos as tags "tr" e "td", responsáveis pelas linhas e células dentro das nossas tabelas. -->
+    <!--CSS padrão de "thead":
+        thead {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit; //herdado do elemento pai
+        }
+    -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody> <!--Fizemos a inclusão da "tbody comportando todo o corpo da tabela"-->
+            <tr>
+                <td colspan="2">a1</td>
+                <td>c1</td>
+            </tr>
+            <tr>
+                <td>a2</td>
+                <td rowspan="2">b2</td>
+                <td>c2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>c3</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>

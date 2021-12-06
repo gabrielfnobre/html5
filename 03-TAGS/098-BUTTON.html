@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUTTON</title>
+</head>
+
+<!-- Tag button (butão)
+    
+    - Essa Tag é usada para definir um botão clicável dentro da página.
+    - Dentro desta tag pode ser colocado o conteúdo, como por exemplo: texto ou imagem.
+    - Sempre especifíque o atributo type do seu button, pois cada navegador pode usar um padrão diferente para o atributo type, por isso é seria bom que o button estivesse específicado, mesmo que o button tenha valor button.
+    - Essa tag pode utilizar todos os atributos glogais.
+    - Mas a tag button também tem atributos específicos, como:
+
+        autofocus: Define o foco principal para este elemento assim que a página é carregada automaticamente. Vale lembrar que
+                    o autofocus deve ser usado de preferência em um único botão para que o navegador saiba onde ele deve focar. Valor: autofocus
+
+        disabled: Define o botão como desabilitado. Valor: disabled
+
+        form: Define a qual formulario esse botão pertence. Valor: ID do formulário
+
+        formaction: Define qual será o action do formulário ao clicar neste botão. Valor: URL
+
+        formenctype: Define qual será o enctype do formulário ao clicar neste botão. Valor: 
+                                                                                            application/x-www-form-urlencoded multipart/form-data
+                                                                                            text/plain
+
+        formmethod: Define qual será o método do formulário ao clicar neste botão. Valor: get, post
+
+        formnovalidade: Desativa a validação do formulário ao clicar neste botão. Valor: formnovalidate
+
+        formtarget: Define qual será o target do formulário ao clicar neste botão. Valor: 
+                                                                                            _blank
+                                                                                            _self
+                                                                                            _parent
+                                                                                            _top
+                                                                                            Nome de um Frame
+
+        name: Define o nome do botão. Valor: Nome
+
+        type: Define o tipo do botão. Valor: 
+                                            button
+                                            reset
+                                            submit
+
+        value: Define o valor inicial do botão, um valor por debaixo dos panos, que o botão vai mostrar ao ser submetido. 
+                Esse não é o nome do botão que vai aparecer na página, visto que o nome do botão vai entre as tags de abertura e fechamento. Valor: Texto
+
+    - O CSS padrão dela é:
+            
+        nenhum
+
+-->
+
+<body>
+    
+    <form id="formulario">
+        <input type="text" value="Hcode" name="name">
+    </form>
+
+    <button type="button">Botão</button>
+    <button type="reset" form="formulario">Limpar</button>
+    <button type="submit" form="formulario">Enviar</button>
+    <!-- Perceba que criamos 3 botões, 1 para cada tipo de botão que podemos usar numa página, onde os 2 últimos fazem referência ao formulário acima por através do atributo "form". Caso os botões estivessem dentro das tags form não precisariamos fazer referência. Note no botão final que, quando você faz o submit ele envia o que quer que você escreve por através de método GET pelo campo de navegação do browser.  -->
+
+</body>
+</html>

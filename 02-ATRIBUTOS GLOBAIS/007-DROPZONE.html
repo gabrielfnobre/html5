@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROPZONE</title>
+    <style>
+        #drop {
+            width: 300px;
+            height: 300px;
+            border: black 1px solid;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: white;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- OBJETIVO:
+        O atributo "dropzone" é um atributo global utilizado para delimitar uma área onde podemos soltar elementos arrastados por através do atributo draggable. O dropzone pode atribuir comportamentos quando um elemento é solto dentro da área dropzone, até agora podemos enumerar três comportamentos: 
+            - "copy": fazer uma cópia do elemento dentro da área dropzone - além do elemento de origem se manter no seu local de origem;
+            - "link": cria um link dentro da área dropzone que levará até o lugar de onde o elemento foi retirado;
+            - "move": move o elemento do seu lugar de origem para dentro da área dropzone;
+        
+        OBSERVAÇÕES: o atributo dropzone ainda não faz isso automáticamente pelo html 5, vamos ver isso somente em versões futuras do html, por enquanto é necessário programação JavaScript para que elementos, documentos, textos e etc possam ser arrastados até a área dropzone e soltos lá.
+    -->
+    <!-- EXEMPLO
+        No exemplo abaixo temos uma div vermelha que pode ser arrastada até a área dropzone (área em branco delimitada pela borda preta) graças a programação em JavaScript...
+    -->
+
+    <div id="drop" class="zona" dropzone="move">Arraste para a div acima para cá.</div>
+    <div id="div1" class="caixa" draggable="true"></div>
+    <div id="div2" class="caixa" draggable="true"></div>
+
+    <script>
+        const caixa = document.querySelectorAll('.caixa');
+        const dropZone = document.querySelector('[dropzone]');
+
+        caixa.forEach(caixaE1 => {
+
+            caixaE1.addEventListener('dragstart', e => {
+                e.dataTransfer.setData('Text', e.target.id);
+                console.log(e.target.id)
+            });
+        });
+
+        dropZone.addEventListener('dragover', e =>{
+
+            e.preventDefault();
+
+        });
+
+        dropZone.addEventListener('drop', e =>{
+
+            const id = e.dataTransfer.getData('Text');
+            const element = document.getElementById(id);
+
+            e.target.appendChild(element);
+
+        });
+
+    </script>
+
+</body>
+</html>

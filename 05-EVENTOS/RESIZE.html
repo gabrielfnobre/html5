@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESIZE</title>
+</head>
+
+<!-- Evento: resize.
+
+        - resize: é um evento que ocorre quando o usuário altera o tamanho da janela do navegador.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body onresize="debug(event)">
+    <!-- Para ver o evento "resize" acontecer, temos que alterar o tamanho da janela. -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console. Para isso, abra o console do navegador, e fique alterando o tamanho da página, você notará que o evento ocorre várias vezes.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

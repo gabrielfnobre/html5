@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DETAILS</title>
+</head>
+
+<!-- Tag details (detalhes)
+    
+        - Essa Tag é usada para definir detalhes adicionais que ficam ocultados sobre um elemento da página, e o usuário pode escolher se deseja visualizá-los ou não, o que ficará visível para ele é só aquilo que colocamos dentro da tag "summary".
+        - Qualquer tipo de conteúdo pode ser colocado dentro dessa tag, até mesmo outras tags.
+        - Por padrão o conteúdo dos detalhes não é exibido para o usuário, isso exige uma ação do usuário, por exemplo, que ele clique encima do elemento que tem a tag "details" para que possa visualizar os detalhes.
+        - A tag deve ter uma tag summary (sumário) dentro dela, que é um resumo de todos os detalhes dentro da tag.
+        - A tag details pode utilizar todos os atributos glogais.
+        - Mas a tag details também têm um atributo único que é open:
+            open: define se os detalhes devem ficar visíveis para o usuário.
+        - O CSS padrão dela é:
+            
+            details {    
+                display: block;
+            }
+-->
+
+<body>
+
+    <header>
+    </header>
+
+    <main>
+    </main>
+
+    <details>
+
+        <summary>Hcode</summary> <!--O uso de summary é o obrigatório, pois ele vai ser o elemento que vai tornar possível que o usuário possa visualizar os detalhes dentro de details-->
+
+        <p>Hcode é uma escola online de treinamento de programação</p>
+        <!--Lembre-se que poderiamos criar um div para fazer todo esse processo que a tag details faz, mas a importância de usar o details é o peso semântico da página-->
+
+    </details>
+
+    <details open> <!--Perceba que, quando queremos que detail já apareça aberta, basta usarmos o atributo "open", como o valor de open é open, podemos colocar só "open" mesmo-->
+
+        <summary>Hcode - perceba que já vem aberto por causa do atributo open</summary> <!--O uso de summary é o obrigatório, pois ele vai ser o elemento que vai tornar possível que o usuário possa visualizar os detalhes dentro de details-->
+
+        <p>Hcode é uma escola online de treinamento de programação</p>
+        <!--Lembre-se que poderiamos criar um div para fazer todo esse processo que a tag details faz, mas a importância de usar o details é o peso semântico da página-->
+
+    </details>
+    
+
+    <footer>
+    </footer>
+
+</body>
+</html>

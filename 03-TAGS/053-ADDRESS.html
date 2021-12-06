@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADDRESS</title>
+</head>
+
+<!-- Tag address (endereço)
+    
+        - Essa Tag é usada para definir as informações de contato do autor do documento, seu endereço físico, mas nada impede que informações gerais como endereços eletrônicos também possam ser encontrados nessa tag.
+        - Se estiver dentro de uma tag article, irá definir as informações do autor do artigo, o mesmo vale de ela estiver num footer, se estiver lá os endereços valem para todo o site, a tag address depende muito do lugar onde ela está alocada.
+        - A tag pode incluir o endereço físico, URL, e-mail, telefone, mídia social, coordenadas geográficas e etc.
+        - Deve incluir o nome da pessoa, grupo ou organização.
+        - A tag address pode utilizar todos os atributos glogais.
+        - O CSS padrão dela é:
+            
+            address {    
+                display: block;
+                font-style: italic;
+            }
+-->
+
+<body>
+
+    <header>
+    </header>
+
+    <main>
+
+        <article>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi veritatis odio dolor, fugiat modi cumque voluptate, blanditiis sunt, illo mollitia quaerat enim beatae suscipit doloremque maxime consectetur repudiandae reprehenderit perferendis?</p>
+
+            <address> <!--Quando o address está dentro um artigo, o foco dele é falar sobre o autor do artigo-->
+                Gabriel F. Nobre<br>
+                Acesse <a href="https://www.github.com/joaohcrangel">github</a><br>
+                Cianorte - PR
+            </address>
+
+        </article>
+
+    </main>
+    
+
+    <footer>
+
+        <address> <!--Geralmente não é recomendado que você utilize parágrafos dentro da tag address, sendo assim, para quebrar linha utilize a tag br-->
+            Hcode Treinamentos<br>
+            Acesse <a href="https://www.hcode.com.br">www.hcode.com.br</a><br>
+            Avenida José Versolato, 101<br>
+            12º andar - Centro<br>
+            São Bernardo do Campo - SP<br>
+            09750-730
+        </address>
+
+    </footer>
+
+</body>
+</html>

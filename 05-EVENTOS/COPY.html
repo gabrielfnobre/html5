@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPY</title>
+</head>
+
+<!-- Evento: copy (cópia)
+
+    - copy: esse evento acontece sempre que tentamos copiar o elemento ao qual o copy foi declarado.
+    - Isso também serve para elementos pai e filho, se o copy for incorporado por um elemento pai, os elementos filhos também poderão ser copiados.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body>
+
+    <p oncopy="debug(event)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet dignissimos eius accusantium vero repellat? Aperiam quibusdam cum odit similique nemo natus eligendi, minima officia quo quae impedit, consectetur dignissimos! Modi?</p>
+    <!-- Perceba que somente o paragráfo de cima tem o evento copy, ou seja, somente ele vai disparar o evento quando tentarmos copiar -->
+
+    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur sed architecto tempora dolorem accusamus mollitia, adipisci eius corrupti minus dicta inventore similique ex iure corporis dignissimos possimus minima ducimus alias!</P>
+    <!-- Já esse parágrafo não tem copy, ou seja, não disparará evento nenhum -->
+
+    <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' foi disparado!');
+        }
+        //Visualize no console para ver com clareza o momento em que o evento acontece.
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

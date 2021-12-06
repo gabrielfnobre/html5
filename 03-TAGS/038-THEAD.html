@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>THEAD</title>
+
+</head>
+<body>
+    <!-- "thead" (Table Head - Cabeçalho da Tabela) é usada para criar um cabeçalho na nossa tabela, essa tag que vai comportar as tags "th" responsáveis pelas células cabeçalho, aquelas que são usadas para identificar atributos na nossa tabela.-->
+    <!-- Tag "thead" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- As "thead" trabalham em conjunto com as tags "tbody" e "tfoot", responsáveis por comportar o corpo da nossa tabela e o rodapé dela - por isso a tag thead deve vir sempre antes delas. São elas que dão peso semântico a nossa tabela para as buscas de SEO e impressões, por exemplo até adicionando rolagens a nossa tabela respeitando o peso semântico dela. -->
+    <!-- A tag "thead" é filha da da tag "table", assim como as tags "tbody" e "tfoot" -->
+    <!-- Essa tag também pode ter 1 ou mais tags "tr" dentro dela dependendo do número de linhas que desejamos que o nosso cabeçalho tenha -->
+    <!-- Podemos usar essa tag também depois de uma tag "caption", que trás um título a tabela, ou de uma tag "colgroup" que designa um determinado número de colunas para sererm agrupadas para algum propósito -->
+    <!--CSS padrão de "thead":
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit; //herdado do elemento pai
+        }
+    -->
+
+    <table>
+        <thead> <!--Houve a inclusão da tag "thead" e seus elementos subjacentes-->
+            <tr> <!--Nesse cabeçalho utilizamos somente uma linha-->
+                <th>Header 1</th> <!--"th" são células específicas para a criação de células de cabeçalho-->
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td colspan="2">a1</td>
+            <td>c1</td>
+        </tr>
+        <tr>
+            <td>a2</td>
+            <td rowspan="2">b2</td>
+            <td>c2</td>
+        </tr>
+        <tr>
+            <td>a3</td>
+            <td>c3</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

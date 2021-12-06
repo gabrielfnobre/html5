@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABINDEX</title>
+</head>
+<body>
+    <!-- OBJETIVO:
+        O atributo global "tabindex" é utilizado para quando desejamos mudar a ordem de navegação da tecla tab para a nossa página html. Geralmente a ordem de navegação por através de tab ocorre na ordem que os elementos são escritos na nossa página html, mas com tabindex podemos adicionar uma ordem numérica pela qual desejamos que os usuários naveguem ao utilizar a tecla tab.
+        Esse recurso facilita muito a navegação do cliente, pois podemos priorizar somente os elementos mais utilizados do nossa página.
+    -->
+    <!-- EXEMPLO 
+        No exemplo abaixo temos um formulário cujos elementos mais utilizados são "nome", "email" e "enviar", porém temos o elemento "limpar" antes do "enviar", e ele é pouco utilizado, veja como mudamos a ordem de navegação utilizando "tabindex" pulando o elemento "limpar" e indo direto para o "enviar".
+    -->
+
+    <form>
+
+        <input type="text" placeholder="nome" tabindex="1">
+        <input type="text" placeholder="email" tabindex="2">
+        <button tabindex="4">Limpar</button>
+        <button tabindex="3">Enviar</button>
+
+    </form>
+
+    <p>Aperte a tecla tab e veja como pula de email para enviar...</p>
+
+</body>
+</html>

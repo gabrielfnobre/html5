@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDI</title>
+</head>
+
+<!-- Tag bdi
+    
+    - Essa Tag é usada para definir parte de um texto que deve ser formatada em uma direção diferente do padrão, por exemplo caracteres chineses que precisam ser escritos de cima para baixo em vez de em linha como escrevemos comumente, ou árabes, que são escritos de trás para frente e assim por diante.
+    - Essa tag é útil ao exibir conteúdo gerado pelo usuário com uma direção desconhecida.
+    - O que a tag bdi faz é indicar para o navegador que aquela parte do texto dentro do conteúdo dela precisar ser interpretada de forma diferenciada, de acordo com o conteúdo entre as tags.
+    - A tag bdi pode utilizar todos os atributos glogais.
+    
+    - O CSS padrão dela é:
+            
+        nenhum
+
+    OBS: Uma vez usando bdi num texto dentro de um elemento, todo o texto deverá ter bdi, para que o interpretador possa interpretar da maneira correta, por exemplo, em listas, todos os itens da lista deverão estar resguardados por uma bdi.
+-->
+
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro hic vitae. Numquam tenetur unde dignissimos nulla aliquam corporis autem eaque obcaecati! Adipisci temporibus est eligendi dignissimos porro neque itaque?</p>
+
+    <ol>
+        <li><bdi>João</bdi></li>
+        <li><bdi>Glaucio</bdi></li>
+        <li><bdi>Djalma</bdi></li>
+        <li><bdi>Ronaldo</bdi></li>
+        <li><bdi>Marcus</bdi></li>
+        <li><bdi>جبريل</bdi></li> <!--Gabriel em Árabe-->
+        <!-- Perceba que uma vez usando bdi sobre um elemento, todos os outros que fizerem parte do mesmo contexto deverão ter bdi também -->
+    </ol>
+
+</body>
+</html>

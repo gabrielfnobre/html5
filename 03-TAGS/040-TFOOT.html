@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>TFOOT</title>
+
+</head>
+<body>
+    <!-- "tfoot" (Table Foot - Rodapé da Tabela) é usada para criar um rodapá na nossa tabela, essa tag que vai comportar as tags responsáveis pelo conteúdo dentro do nosso rodapé na tabela.-->
+    <!-- Tag "tfoot" precisa ser aberta e fechada, o que significa que podemos colocar conteúdos dentro dela -->
+    <!-- As "tfoot" trabalham em conjunto com as tags "thead" e "tbody", responsáveis por comportar o cabeçalho da nossa tabela e o corpo dela - por isso a tag tfoot deve vir sempre depois da tag "tbody". São elas que dão peso semântico a nossa tabela para as buscas de SEO e impressões, por exemplo até adicionando rolagens a nossa tabela respeitando o peso semântico dela. -->
+    <!-- A tag "tfoot" é filha da da tag "table", assim como as tags "thead" e "tbody" -->
+    <!-- Nessa tag podemos comportar tags "tr" e "td" - se for o caso. -->
+    <!--CSS padrão de "thead":
+        tfoot {
+            display: table-footer-group;
+            vertical-align: middle;
+            border-color: inherit; //herdado do elemento pai
+        }
+    -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">a1</td>
+                <td>c1</td>
+            </tr>
+            <tr>
+                <td>a2</td>
+                <td rowspan="2">b2</td>
+                <td>c2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>c3</td>
+            </tr>
+        </tbody>
+        <tfoot> <!--Aqui adicionamos uma tag tfoot-->
+            <tr> <!--Com uma linha-->
+                <td colspan="3">Rodapé1</td> <!--Designamos a linha sobre três colunas para ocupar toda a área da tela-->
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+</html>

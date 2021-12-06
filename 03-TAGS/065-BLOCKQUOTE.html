@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOCKQUOTE</title>
+</head>
+
+<!-- Tag blockquote (bloco de citação)
+    
+    - Essa Tag é usada quando desejamos fazer uma citação externa sobre algo que outra URL está dizendo, inclusive usamos um link para isso.
+    - De preferência devemos usar a tag "blockquote" somente para citações grande, para citações curtas use a tag "q" e não a "blockquote".
+    - Essa tag vai trazer apenas um peso semântico sobre a tela, ela não vai trazer grandes mudanças visuais.
+    - A tag blockquote pode utilizar todos os atributos glogais.
+    - Mas essa tag também possuí um atributo específico que é o atributo "cite":
+
+        cite: Define a fonte de uma citação, e recebe como valor a URL da citação.
+
+    - O CSS padrão dela é:
+            
+        blockquote {
+            display: block;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+-->
+
+<body>
+    
+    <blockquote cite="https://www.jw.org/pt/ensinos-biblicos/paz-felicidade/">
+        Nossos problemas podem nos deixar com a impressão de que a felicidade e a paz interior estão fora do nosso alcance. Mas a Bíblia ajudou muitas pessoas a lidar com os problemas do dia a dia, a enfrentar doenças físicas e emocionais, e a ter verdadeiro objetivo na vida. A Bíblia pode ajudar você a ser feliz também.
+    </blockquote>
+    <!-- Perceba que, apesar de fazermos referência  outra site, mesmo quando passamos o mouse por cima do site no navegador, ele não vai fazer referência direta, o peso de blockquote é totalmente semântico. -->
+
+</body>
+</html>

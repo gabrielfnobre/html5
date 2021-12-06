@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HASHCHANGE</title>
+</head>
+
+<!-- Evento: HASHCHANGE (Mudança de Hash)
+
+    - hashchange: vai causar algum comportamento quando acontece uma mudança de hash, como por exemplo quando acessamos um link que faz referência por através de hash.
+
+    OBS: Todos os eventos devem começar com o prefixo "on";
+-->
+
+<body onhashchange="debug(event)">
+
+    <a href="#body">me acesse e veja o evento hashchange ser disparado</a>
+
+    <script>
+        function debug(e) {
+            alert('Evento: ' + e.type + '\nPerceba que, quando o evento foi disparado na barra de navegação o # foi adicionado junto com a tag body!');
+        }
+    </script>
+    <!-- Adicionamos como comportamento mostrar uma mensagem de alerta, mas podemos acionar "n" tipos de comportamento -->
+
+</body>
+</html>

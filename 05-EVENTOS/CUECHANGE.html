@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUECHANGE</title>
+</head>
+
+<!-- Evento: cuechange (deixa mudar).
+
+        # Esse é um evento que acontece por interação do servidor, por isso o arquivo deverá estar vinculado a um servidor para que o evento possa ser visualizado.
+
+        - cuechange: é um evento que ocorre sempre que a legenda de uma mídia muda de uma frase para outra.
+
+    OBS: todos os eventos devem começar com o prefixo "on" 
+-->
+
+<body>
+
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4">
+    <track src="AV1_trailer_pt.vtt" label="Português" kind="subtitles" srclang="pt" default oncuechange="debug(event)">
+    </video>
+    <!-- Perceba que o cuechange acontece toda vez que as frases das legendas mudam. ATENÇÃO! Pode ser que as legendas não apareçam no vídeo, atualmente o navegador não está carregando legendas que ele pensa não virem de uma fonte segura.-->
+
+   <script>
+        function debug(e) {
+            console.log('Evento: ' + e.type + ' está acontecendo nesse momento.');
+        }
+        // Para ter uma visão melhor o evento acontecendo, veja no console.
+    </script>
+    <!-- Atenção! Usamos como exemplo mostrar uma mensagem no console ou um alert na janela, mas lembre-se que as possibilidades são infinitas quando usamos JavaScript -->
+
+</body>
+</html>

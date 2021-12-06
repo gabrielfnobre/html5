@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="035-cssTable.css">
+    <title>COL</title>
+</head>
+<body>
+    <!-- A tag col (ou column - coluna) é usada para definir um estilo individual para as colunas, ela é usada quando queremos definir estilos diferentes para várias colunas de um única vez. Para isso as tags "col" trabalham junto com a tag "colgroup", enquanto colgroup iria definir um mesmo estilo para todas as colunas atribuídas no "span", col pode trazer um estilo individual para uma determinada coluna também usando span. -->
+    <!-- a TAG col só abre -->
+    <!-- A tag col usa um atributo especial para ela, que é o:
+            => span: Define o número de colunas que será estilizada individualmente, como valor desse atributo usamos números.
+    -->
+    <!-- O estilo CSS padrão da tag col é:
+            col {
+                display: table-column;
+            }
+    -->
+
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: red;"> <!--O primeiro valor de span referencia sempre a posição da coluna em relação as outras.-->
+            <col span="1" style="background-color: green;"> <!--Perceba que não colocamos coluna 2, pois ele estiliza logo depois do primeiro valor ter sido referenciado a próxima coluna, se colocássemos o valor "2" aqui ele iria estilizar as colunas 2 e 3 de uma vez-->
+            <col style="background-color: blue;"> <!--Nem colocamos o valor da coluna por que já sabemos que esse col será para a próxima coluna.-->
+            <!-- Usando col podemos estilizar colunas individualmente -->
+        </colgroup> 
+        <thead>
+            <tr>
+                <th sorted="reversed">Header 1</th>
+                <th abbr="Jan">Janeiro</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">a1</td>
+                <td>c1</td>
+            </tr>
+            <tr>
+                <td>a2</td>
+                <td rowspan="2">b2</td>
+                <td>c2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>c3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rodapé1</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Perceba que cada coluna agora tem um estilo diferente apesar de estarem todas em colgroup.</h1>
+
+</body>
+</html>
