@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .azul:checked {
+            color: blue;
+        }
+    </style>
+<title>LABEL</title>
+</head>
+
+<!-- Tag label (etiqueta)
+    
+        - A tag "label" é uma tag que sempre amarra um determinado texto a ou objeto na nossa página, a outro elemento da nossa página HTML. Quando isso é feito, se o usuário clicar no conteúdo que nós criamos com uma determinada "label" ele irá acionar o objeto onde a nossa "label" está amarrada.
+
+        - Podemos entender melhor a usabilidade de uma label, quando á utilizamos em conjunto com menus sanduíche que utilizam um checkbox com display none, para todas as vezes que clicarmos os traços do menu, que são colocados dentro de uma label, o checkbox seja acionado ou desacionado, trazendo algum tipo de comportamento.
+        - Ou então, quando usamos uma label em conjunto com um input de formulário. Onde, quando clicamos no texto da label o nosso cursor de mouse irá direto para dentro do input, onde a nossa label está amarrada.
+
+        Para amarrar um label um objetos, usamos o atributo "for", esse atributo irá receber como entrada o nome do id do objeto que desejamos amarrar a nossa label.
+
+        Vejamos abaixo um exemplo de como utilizá-la...
+
+-->
+
+<body>
+
+    <form action="/send" method="post" target="_blank" enctype="multipart/form-data">
+
+        <label for="nome"><span style="color: #f00; font-weight: bold;">Nome</span></label>
+        <p>Clique na palavra <span style="color: #f00; font-weight: bold;">"Nome"</span>, e veja que o campo input irá ser selecionado.</p>
+        <input type="text" name="username" id="nome">
+        
+    </form>
+    <!-- Geralmente sempre usamos um par: "label & input", isso facilita com que o usuário possa selecionar uma palavra e ir direto para um campo de formulário. Principalmente em páginas que são comprimidas e fica quase impossível selecionar um input.-->
+
+</body>
+</html>
