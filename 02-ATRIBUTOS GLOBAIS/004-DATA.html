@@ -4,27 +4,35 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .format {
+                background-color: palegoldenrod;
+                padding: 10px;
+                font-weight: bold;
+            }
+        </style>
         <title>Data-*</title>
     </head>
 
     <body>
 
         <!-- OBJETIVO:
-            O atributo data-* tem o objetivo de referenciar uma determinada informação sobre um elemento para que essa informação possa ser capturada e usada em outra aplicação fora do html, como por exemplo: Bancos de Dados e JavaScript. Podemos armazenar informações como "id", "class", "emails" e muitas outras informações relevantes dentro do atributo data. Ele é um atributo global, podendo ser usado em qualquer elemento do html.
+            O atributo data-* tem o objetivo de gerar referências por através de "data-atribute", que são muito uteis para quando desejamos aplicar um determinado comportamento a elementos do nosso HTML que já possuam uma classe ou id, mas para não repetir classes ou colocar mais ids desnecessariamente nós usamos data-atributes.
+
+            Podemos colocar qualquer nome depois de data-*...
         -->
 
         <!-- EXEMPLO:
-            No exemplo abaixo podemos ver o uso e a sintáxe do atributo global "data-*", usamos ele nesse caso para abrir referências ao id e ao email das tags "li" dentro de uma lista...
+            No exemplo abaixo podemos ver bem isso, onde ambos botões têm que ter a mesma formatação de estilo mas não podem ter o mesmo nome, e resolvemos atribuir esses nomes de forma dinâmica por javascript, note que o que delimita o que cada um deles vai receber como nome são os data-attributes...
         -->
-        <ul>
-            <li data-id="1" data-email="nobrecoder@gmail.com">Gabriel</li>
-            <li data-id="2" data-email="grazielasnobre@gmail.com">Graziela</li>
-        </ul>
-        <p>Inspecione os elementos "li" para ver as referências das tags data-* sendo expostas para uso em JavaScript...</p>
-        <!-- OBSERVAÇÕES
-            Perceba que para cada informação que desejamos referenciar utilizamos apenas 1 atributo "data" (não é necessário separá-los pelas vírgulas).
-        -->
+        
+        <button class="format" data-primeiro></button>
+        <button class="format" data-segundo></button>
 
-
+        <script>
+            //Note que para usar o data-attribute foi necessário usar "[]" - colchetes ...
+            document.querySelector('[data-primeiro]').textContent = 'PRIMEIRO BOTÃO'
+            document.querySelector('[data-segundo]').textContent = 'SEGUNDO BOTÃO'
+        </script>
     </body>
 </html>
