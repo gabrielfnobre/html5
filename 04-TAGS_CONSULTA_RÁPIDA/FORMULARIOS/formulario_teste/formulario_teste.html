@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Teste</title>
+</head>
+<body>
+    <form>
+        <label for="name">
+            <input type="text" id="name">
+        </label>
+        <label for="date">
+            <input type="date" id="date" data-tipo = "dataNascimento" required>
+        </label>
+        <input type="submit">
+    </form>
+</body>
+</html>
+<!-- Perceba que o formulário para trabalhar com um módulos tem que estar com type "module", além disso, ele tem que estar dentro de um servidor http, do contrário vai ocasionar um erro de CORS, precisa estar dentro de um servidor http, faça o teste com o live-server do vscode, instale o browser-sync no npm ou use o apache... -->
+<script src="./app.js" type="module"></script>
