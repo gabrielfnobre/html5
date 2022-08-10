@@ -8,12 +8,24 @@
 </head>
 <body>
     <form action="">
-        <label for="cpf">
-            CPF
-            <input type="text" id="cpf">
+        <label for="cep">
+            CEP
+            <input type="text" id="cep" pattern="[\d]{5}-?[\d]{3}" required data-tipo = "cep">
+        </label>
+        <label for="logradouro">
+            Logradouro
+            <input type="text" id="logradouro" required data-tipo = "logradouro">
+        </label>
+        <label for="cidade">
+            Cidade
+            <input type="text" id="cidade" required data-tipo = "cidade">
+        </label>
+        <label for="estado">
+            Estado
+            <input type="text" id="estado" required data-tipo = "estado">
         </label>
         <input type="submit">
     </form>
 </body>
-<script src="validaCPF.js"></script>
+<script src="validaCEP.js"></script>
 </html>
