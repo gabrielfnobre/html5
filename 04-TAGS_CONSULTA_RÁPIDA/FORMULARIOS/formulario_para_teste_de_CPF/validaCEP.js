@@ -27,7 +27,24 @@ function recuperaCEP(input){
     if(!input.validity.patternMismatch && !input.validity.valueMissing){
         fetch(url, options)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if(data.erro){
+                    input.setCustomValidity('Não foi possível buscar CEP')
+                    return
+                }
+                input.setCustomValidity('')
+                preencheCamposComCEP(data)
+            })
     }
 
+}
+
+function preencheCamposComCEP(data){
+    const logradouro = document.querySelector('[data-tipo="logradouro"]')
+    const cidade = document.querySelector('[data-tipo="cidade"]')
+    const estado = document.querySelector('[data-tipo="estado"]')
+
+    logradouro.value = data.logradouro
+    cidade.value = data.localidade
+    estado.value = data.uf
 }
